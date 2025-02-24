@@ -39,14 +39,12 @@ useHead({
 <template>
     <NuxtLoadingIndicator color="gray" />
     <CommonSettings />
-    <CommonSocial />
 
     <UContainer>
         <NuxtLayout>
             <nuxtPage />
         </NuxtLayout>
 
-        <commonFooter />
     </UContainer>
 
     <UModals />

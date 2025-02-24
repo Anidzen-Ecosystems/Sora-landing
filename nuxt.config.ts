@@ -23,5 +23,11 @@ export default defineNuxtConfig({
         vueI18n: './i18n.config.ts',
     },
 
+    colorMode: {
+        preference: 'light',
+        fallback: 'light',
+        globalName: '__NUXT_COLOR_MODE__',
+    },
+
     compatibilityDate: '2025-02-07',
 });

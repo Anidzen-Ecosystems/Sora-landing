@@ -42,9 +42,7 @@ useHead({
         <NuxtLayout>
             <nuxtPage />
         </NuxtLayout>
-        <div style="height: 2000px">
-
-        </div>
+        <CommonFooter/>
     <UModals />
     <UNotifications />
 </template>

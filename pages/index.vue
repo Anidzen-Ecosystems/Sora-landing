@@ -3,5 +3,5 @@
 
 <template>
   <PrimaryHeader/>
-
+  <FrequentlyAskedQuestions/>
 </template>

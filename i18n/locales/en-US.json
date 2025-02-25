@@ -1,3 +1,20 @@
 {
-
+  "site_name": "Sora",
+  "menu": {
+    "main": "Home",
+    "contact_us": "Contact Us"
+  },
+  "primary_title": {
+    "title": "Sora.QL - Simple and Fast GraphQL API for Anime",
+    "subtitle": "Get instant anime data with Sora.QL — a fast and lightweight GraphQL API. Access information about series, characters, and episodes in multiple languages without delay!",
+    "footer": {
+      "top": "All anime data from",
+      "bottom": "— the best anime source in the world!"
+    },
+    "docsButton": "Documentation",
+    "playgroundButton": "Playground"
+  },
+  "footer": {
+    "rights_reserved": "All rights reserved ©"
+  }
 }

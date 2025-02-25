@@ -1,5 +1,5 @@
 export default defineNuxtPlugin((nuxtApp) => {
-    const selectedPrimary = useCookie('selectedPrimary').value || 'lime';
+    const selectedPrimary = useCookie('selectedPrimary').value || 'blue';
     const selectedGray = useCookie('selectedGray').value || 'neutral';
 
     nuxtApp.provide('selectedPrimary', selectedPrimary);

@@ -18,7 +18,7 @@ const keywords = {
 const currentKeywords = computed(() => keywords[locale.value] || keywords.en);
 
 useHead({
-    title: t('name') + ' ' + t('surname') + ' — ' + t('siteName'),
+    //title: t('name') + ' ' + t('surname') + ' — ' + t('siteName'),
     meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { key: 'theme-color', name: 'theme-color', content: color },
@@ -38,20 +38,22 @@ useHead({
 
 <template>
     <NuxtLoadingIndicator color="gray" />
-    <CommonSettings />
-
-    <UContainer>
+        <CommonHeader/>
         <NuxtLayout>
             <nuxtPage />
         </NuxtLayout>
+        <div style="height: 2000px">
 
-    </UContainer>
-
+        </div>
     <UModals />
     <UNotifications />
 </template>
 
 <style>
+body {
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar {
     @apply w-2;
 }

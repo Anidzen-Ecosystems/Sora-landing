@@ -1,3 +1,10 @@
 {
-
+  "site_name": "Sora",
+  "menu": {
+    "main": "главная",
+    "contact_us": "связаться с нами"
+  },
+  "footer": {
+    "rights_reserved": "Все права защищены ©"
+  }
 }

@@ -2,12 +2,19 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
 
+    app: {
+        head: {
+            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }],
+        }
+    },
+
     modules: [
         '@nuxt/ui',
         '@pinia/nuxt',
         'nuxt-time',
         '@nuxt/image',
         '@nuxtjs/i18n',
+        'nuxt-highcharts',
     ],
 
     i18n: {

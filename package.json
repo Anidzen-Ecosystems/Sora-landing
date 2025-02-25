@@ -1,5 +1,5 @@
 {
-  "name": "w33bv.gl-portfolio",
+  "name": "Sora-ql",
   "private": true,
   "type": "module",
   "scripts": {
@@ -23,12 +23,9 @@
     "vue": "latest",
     "zod": "^3.23.8"
   },
+  "dependencies": {
+  },
   "overrides": {
     "vue": "latest"
-  },
-  "dependencies": {
-    "chart.js": "^3.9.1",
-    "nuxt-highcharts": "^3.1.1",
-    "vue-chart-3": "^3.1.8"
   }
 }

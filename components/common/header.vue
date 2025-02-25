@@ -4,6 +4,7 @@ const { t, locale } = useI18n();
 
 let menuItems = [
   { label: t('menu.main'), to: '/' },
+  { label: t('menu.faq'), to: '#faq' },
   { label: t('menu.contact_us'), to: '#contact_us' },
 ];
 
@@ -34,9 +35,10 @@ watch(
                   >QL</span
                   >
                   </h1>
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                    {{ t('footer.rights_reserved')}} {{new Date().getFullYear()}}
-                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">1.0.0</p>
+<!--                  <p class="text-sm text-gray-500 dark:text-gray-400">-->
+<!--                    {{ t('footer.rights_reserved')}} {{new Date().getFullYear()}}-->
+<!--                  </p>-->
                 </div>
               </div>
             </ULink>

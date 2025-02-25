@@ -1,10 +1,20 @@
 {
   "site_name": "Sora",
   "menu": {
-    "main": "main",
-    "contact_us": "contact us"
+    "main": "Գլխավոր",
+    "contact_us": "Կապ մեզ հետ"
+  },
+  "primary_title": {
+    "title": "Sora.QL - Պարզ և արագ GraphQL API անիմեի համար",
+    "subtitle": "Ստացեք վայրկյանների ընթացքում անիմե տվյալներ Sora.QL-ից՝ արագ և թեթև GraphQL API-ով։ Մուտք գործեք տեղեկատվություն սերիալների, կերպարների և էպիզոդների մասին բազմալեզու առանց ուշացման:",
+    "footer": {
+      "top": "Բոլոր անիմե տվյալները՝",
+      "bottom": "— լավագույն աղբյուրը անիմեի համար աշխարհում!"
+    },
+    "docsButton": "Փաստաթղթավորում",
+    "playgroundButton": "Խաղադաշտ"
   },
   "footer": {
-    "rights_reserved": "All rights reserved ©"
+    "rights_reserved": "Բոլոր իրավունքները պաշտպանված են ©"
   }
 }

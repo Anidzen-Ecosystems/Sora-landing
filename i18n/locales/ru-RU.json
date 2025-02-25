@@ -1,8 +1,19 @@
 {
   "site_name": "Sora",
   "menu": {
-    "main": "главная",
-    "contact_us": "связаться с нами"
+    "main": "Главная",
+    "contact_us": "Связаться с нами",
+    "faq": "FAQ"
+  },
+  "primary_title": {
+    "title": "Sora.QL - Простой и быстрый GraphQL API для аниме",
+    "subtitle": "Получите мгновенные данные об аниме с Sora.QL — быстрым и легким GraphQL API. Доступ к информации о сериалах, персонажах и эпизодах на нескольких языках без задержек!",
+    "footer": {
+      "top": "Все данные об аниме из",
+      "bottom": "— лучший источник аниме в мире!"
+    },
+    "docsButton": "Документация",
+    "playgroundButton": "Playground"
   },
   "footer": {
     "rights_reserved": "Все права защищены ©"

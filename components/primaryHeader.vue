@@ -3,7 +3,10 @@
 
 <template>
   <div class="w-dvh h-dvh overflow-hidden">
-    <UiFallingBlocks/>
+    <div class="relative">
+        <UiFallingBlocks/>
+        <PrimaryTitle/>
+    </div>
     <div class="gradient-overlay top-0"></div>
     <div class="gradient-overlay bottom-0 rotate-180"></div>
   </div>

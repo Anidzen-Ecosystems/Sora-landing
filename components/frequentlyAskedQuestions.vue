@@ -1,7 +1,11 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <PrimaryHeader/>
-
+        wdwd
 </template>
+
+<style scoped>
+
+</style>

@@ -2,7 +2,7 @@
 
 const rows = 15;
 const cols = 30;
-const numBlocks = 2;
+const numBlocks = 5;
 const spawnInterval = 3000;
 const fallInterval = 1000;
 
@@ -43,9 +43,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="absolute">
-    <div class="tetris relative">
-      <div v-for="(row, rowIndex) in grid" :key="rowIndex" class="row">
+  <div class="absolute -z-10">
+    <div class="tetris">
+      <div v-for="(row, rowIndex) in grid" :key="rowIndex" class="row -z-0">
         <div v-for="(cell, colIndex) in row" :key="colIndex"
              class="cell border-[0.1px] border-primary border-opacity-10"
              :class="{ filled: cell === 1 || activeBlocks.some(block => block.x === colIndex && block.y === rowIndex) }">

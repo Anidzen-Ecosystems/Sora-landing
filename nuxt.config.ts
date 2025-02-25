@@ -8,7 +8,6 @@ export default defineNuxtConfig({
         'nuxt-time',
         '@nuxt/image',
         '@nuxtjs/i18n',
-        'nuxt-highcharts',
     ],
 
     i18n: {

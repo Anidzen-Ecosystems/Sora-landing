@@ -12,8 +12,8 @@ const { t } = useI18n()
             {{ t('primary_title.footer.bottom')}}
         </h6>
         <div class="flex gap-4 mt-4">
-            <UButton size="xl" to="/docs">{{ t('primary_title.docsButton') }}</UButton>
-            <UButton size="xl" variant="soft" to="/playground">{{ t('primary_title.playgroundButton') }}</UButton>
+            <UButton size="xl" to="#">{{ t('primary_title.docsButton') }}</UButton>
+            <UButton size="xl" variant="soft" to="#">{{ t('primary_title.playgroundButton') }}</UButton>
         </div>
     </div>
 </template>

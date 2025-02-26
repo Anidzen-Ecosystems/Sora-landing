@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n()
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const items = [
+const { t, locale } = useI18n();
+
+const items = computed(() => [
     {
         label: t('faq.data_source.label'),
         icon: 'i-heroicons-trophy',
@@ -38,11 +41,12 @@ const items = [
         icon: 'i-heroicons-command-line',
         content: t('faq.tech_stack.content'),
     },
-]
+]);
 </script>
 
+
 <template>
-    <UContainer>
+    <UContainer v-if="items.length">
         <UAccordion
             color="primary"
             variant="soft"

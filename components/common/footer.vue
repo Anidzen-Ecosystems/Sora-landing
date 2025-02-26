@@ -18,15 +18,15 @@ const sections = computed(() => [
         links: [
             {
                 text: t('footer.sections.account.signIn'),
-                href: config.public.cabinetURL + '/' + locale.value + '/auth/signIn',
+                href: '#',
             },
             {
                 text: t('footer.sections.account.signUp'),
-                href: config.public.cabinetURL + '/' + locale.value + '/auth/signUp',
+                href: '#',
             },
             {
                 text: t('footer.sections.account.cabinet'),
-                href: config.public.cabinetURL + '/' + locale.value,
+                href: '#',
             },
         ],
     },
@@ -49,7 +49,7 @@ const sections = computed(() => [
                     <NuxtLink :to="localeRoute('/')" class="flex items-center">
                         <NuxtImg src="/logo.png" width="50" class="grayscale" />
                         <span class="ml-2 uppercase font-medium">{{
-                                $t('siteName')
+                                $t('site_name')
                             }}</span>
                     </NuxtLink>
                     <h5 class="mt-2 opacity-50 md:max-w-sm">
@@ -89,7 +89,7 @@ const sections = computed(() => [
                 <span class="opacity-50">
                     © 2018-{{ currentYear }}
                     <NuxtLink :to="localeRoute('/')" class="hover:underline">{{
-                            $t('siteName')
+                            $t('site_name')
                         }}</NuxtLink>
                     {{ $t('footer.allRightsReserved') }}.
                 </span>

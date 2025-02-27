@@ -46,9 +46,8 @@
     }
   },
   "footer": {
-    "rights_reserved": "Բոլոր իրավունքները պաշտպանված են ©",
-    "allRightsReserved": "Все права защищены",
-    "copyright": "SagaOnline — неофициальный сервер игры Pandora-Saga, предоставленный исключительно для ознакомительных целей. Все права принадлежат NSOFT.",
+    "rights_reserved": "Sora.QL — это проект, принадлежащий Anidzen Ecosystems. Мы используем официальный API MyAnimeList.net для получения данных о аниме. Однако, Sora.QL не является официальным API MyAnimeList.net.",
+    "copyright": "Anidzen Ecosystems",
     "sections": {
       "resources": {
         "title": "Ресурсы",
@@ -56,7 +55,7 @@
         "information": "Информация"
       },
       "social": {
-        "title": "Следите нас"
+        "title": "Следите за нами"
       },
       "account": {
         "title": "Аккаунт",

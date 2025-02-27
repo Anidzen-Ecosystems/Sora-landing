@@ -46,21 +46,26 @@ const sections = computed(() => [
         <UContainer>
             <div class="md:flex md:justify-between md:gap-5">
                 <div class="mb-6 md:mb-0">
-                    <NuxtLink :to="localeRoute('/')" class="flex items-center">
-                        <NuxtImg src="/logo.png" width="50" class="grayscale" />
-                        <span class="ml-2 uppercase font-medium">{{
-                                $t('site_name')
-                            }}</span>
+                    <NuxtLink to="https://github.com/Anidzen-Ecosystems" class="flex items-center">
+                        <NuxtImg src="/icons/anidzen.svg" class="w-10 filter select-none"/>
+                        <span class="ml-2 uppercase font-medium text-primary">
+                            Anidzen
+                        </span>
+                        <UIcon name="i-heroicons-x-mark" class="text-3xl font-bold px-5 select-none"></UIcon>
+                        <NuxtImg src="/icons/sora.svg" class="w-10 filter select-none "/>
+                        <span class="ml-2 uppercase font-medium text-primary">
+                            Sora.ql
+                        </span>
                     </NuxtLink>
-                    <h5 class="mt-2 opacity-50 md:max-w-sm">
-                        {{ $t('footer.copyright') }}
+                    <h5 class="mt-2 opacity-50 md:max-w-xl">
+                        {{ $t('footer.rights_reserved') }}
                     </h5>
                 </div>
                 <div
                     class="mb-4 lg:mb-0 grid gap-5 sm:gap-4 grid-cols-2 xl:grid-cols-2"
                 >
                     <div v-for="section in sections" :key="section.title">
-                        <h3 class="mb-2 font-medium">
+                        <h3 class="mb-2 font-medium text-primary">
                             {{ section.title }}
                         </h3>
                         <ul class="opacity-50 text-sm flex flex-col gap-1">
@@ -87,16 +92,12 @@ const sections = computed(() => [
             />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="opacity-50">
-                    © 2018-{{ currentYear }}
-                    <NuxtLink :to="localeRoute('/')" class="hover:underline">{{
-                            $t('site_name')
-                        }}</NuxtLink>
-                    {{ $t('footer.allRightsReserved') }}.
+                    © 2024-{{ currentYear }}
+                    {{ $t('footer.copyright') }}
                 </span>
                 <div
                     class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
                 >
-                  ww
                 </div>
             </div>
         </UContainer>

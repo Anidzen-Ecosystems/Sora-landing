@@ -27,7 +27,7 @@ watch(
           <div>
             <ULink :to="localeRoute('/')">
               <div class="flex gap-2 items-center">
-                <UiLogo/>
+                  <NuxtImg src="/icons/sora.svg" class="w-14"/>
                 <div>
                   <h1 class="text-2xl font-bold uppercase">
                     {{ t('site_name') }}.<span

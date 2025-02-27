@@ -14,7 +14,63 @@
     "docsButton": "Documentation",
     "playgroundButton": "Playground"
   },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Here you'll find answers to the most common questions about our platform.",
+    "language_support": {
+      "label": "Is there multilingual support in the API?",
+      "content": "Sora.QL API supports multiple languages, including English, Armenian, Russian, and others. We use the Google Translate API to translate data, ensuring support for many languages for your convenience."
+    },
+    "data_source": {
+      "label": "Where does the data come from?",
+      "content": "All data provided by Sora.QL comes from MyAnimeList.net—the largest and most authoritative anime social network in the world! MyAnimeList.net is the biggest anime social network and database, containing millions of ratings, detailed information about anime, manga, characters, and episodes. We take pride in offering you access to this data, as MyAnimeList is rightfully considered the best source for all anime fans, and our integration with this service allows you to receive up-to-date and accurate information in real time."
+    },
+    "multi_language_support": {
+      "label": "Can the API be used with other programming languages?",
+      "content": "Yes, the API works through standard GraphQL and can be integrated with any programming language that supports GraphQL queries. This provides flexibility in using the API in various projects and languages."
+    },
+    "scalability": {
+      "label": "How does the API handle high loads?",
+      "content": "The API uses a scalable architecture, distributed request processing, and intelligent caching to ensure high performance. We employ asynchronous request processing and parallel computing, allowing the API to handle numerous requests simultaneously without delays. Additionally, load balancing and database optimization are used to guarantee stable operation even under extremely high loads."
+    },
+    "tech_stack": {
+      "label": "What tech stack is the API built on?",
+      "content": "Sora.QL API uses a modern tech stack, including Nuxt.js and Laravel for request handling. The API is optimized for high performance and scalability, ensuring fast and reliable responses even with large amounts of data."
+    },
+    "rate_limit": {
+      "label": "How much data can be requested?",
+      "content": "The API has a request limit per unit of time. Each plan has its own limit on the number of requests per minute. For higher request volumes and higher limits, please check the pricing page at the top."
+    },
+    "rate_limit_info": {
+      "label": "Are there restrictions on the number of users using a single API key at the same time?",
+      "content": "We do not limit the number of users, but there is a request limit per minute depending on the selected plan."
+    }
+  },
   "footer": {
-    "rights_reserved": "All rights reserved ©"
+    "rights_reserved": "Բոլոր իրավունքները պաշտպանված են ©",
+    "allRightsReserved": "Все права защищены",
+    "copyright": "SagaOnline — неофициальный сервер игры Pandora-Saga, предоставленный исключительно для ознакомительных целей. Все права принадлежат NSOFT.",
+    "sections": {
+      "resources": {
+        "title": "Ресурсы",
+        "about": "О нас",
+        "information": "Информация"
+      },
+      "social": {
+        "title": "Следите нас"
+      },
+      "account": {
+        "title": "Аккаунт",
+        "signIn": "Войти",
+        "signUp": "Зарегистрироваться",
+        "cabinet": "Личный кабинет"
+      },
+      "document": {
+        "title": "Документы",
+        "userAgreement": "Пользовательское соглашение",
+        "privacyPolicy": "Политика конфиденциальности",
+        "termsOfUse": "Условия использования"
+      }
+    }
   }
 }

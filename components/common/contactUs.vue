@@ -17,7 +17,7 @@ const localeRoute = useLocaleRoute();
             <UButton
                 size="xl"
                 class="px-8 text-white bg-primary hover:bg-primary-dark rounded-xl"
-                :to="localeRoute('/contact')"
+                :to="localeRoute('/')"
             >
                 {{ t('contactUs.contact') }}
             </UButton>

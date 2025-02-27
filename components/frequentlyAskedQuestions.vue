@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t } = useI18n();
 
-const items = [
+const items = computed(() => [
     {
         label: t('faq.data_source.label'),
         icon: 'i-heroicons-trophy',
@@ -38,16 +38,30 @@ const items = [
         icon: 'i-heroicons-command-line',
         content: t('faq.tech_stack.content'),
     },
-]
+]);
 </script>
 
+
 <template>
-    <UContainer>
-        <UAccordion
-            color="primary"
-            variant="soft"
-            size="xl"
-            :items="items" />
-    </UContainer>
+    <section id="frequently-asked-questions" class="section">
+        <UContainer v-if="items.length">
+            <div class="mb-5">
+                <h2 class="text-4xl font-semibold text-primary">{{ t('faq.title') }}</h2>
+                <p class="text-gray-600 dark:text-gray-400">{{ t('faq.description') }}</p>
+            </div>
+            <UAccordion
+                color="primary"
+                variant="soft"
+                size="xl"
+                :items="items" >
+
+                <template #item="{ item }">
+                    <p class="text-gray-600 dark:text-gray-400 text-base">
+                        {{ item.content }}
+                    </p>
+                </template>
+            </UAccordion>
+        </UContainer>
+    </section>
 </template>
 

@@ -57,11 +57,9 @@
       "social": {
         "title": "Следите за нами"
       },
-      "account": {
-        "title": "Аккаунт",
-        "signIn": "Войти",
-        "signUp": "Зарегистрироваться",
-        "cabinet": "Личный кабинет"
+      "other": {
+        "title": "Дополнительно",
+        "myAnimeList": "MyAnimeList.net",
       },
       "document": {
         "title": "Документы",

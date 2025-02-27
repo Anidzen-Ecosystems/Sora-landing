@@ -3,5 +3,8 @@
 
 <template>
   <PrimaryHeader/>
+    <div style="height: 1000px">
+
+    </div>
   <FrequentlyAskedQuestions/>
 </template>

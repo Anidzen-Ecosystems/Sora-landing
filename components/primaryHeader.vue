@@ -2,14 +2,14 @@
 </script>
 
 <template>
-  <div class="w-dvh h-dvh overflow-hidden">
+  <section id="main" class="section w-dvh h-dvh overflow-hidden">
     <div class="relative">
         <UiFallingBlocks/>
         <PrimaryTitle/>
     </div>
     <div class="gradient-overlay top-0"></div>
     <div class="gradient-overlay bottom-0 rotate-180"></div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
 const items = computed(() => [
     {
@@ -46,12 +43,14 @@ const items = computed(() => [
 
 
 <template>
-    <UContainer v-if="items.length">
-        <UAccordion
-            color="primary"
-            variant="soft"
-            size="xl"
-            :items="items" />
-    </UContainer>
+    <section id="frequently-asked-questions" class="section">
+        <UContainer v-if="items.length">
+            <UAccordion
+                color="primary"
+                variant="soft"
+                size="xl"
+                :items="items" />
+        </UContainer>
+    </section>
 </template>
 

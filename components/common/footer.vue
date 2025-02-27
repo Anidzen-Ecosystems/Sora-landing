@@ -14,28 +14,17 @@ const currentYear = computed(() => new Date().getFullYear());
 
 const sections = computed(() => [
     {
-        title: t('footer.sections.account.title'),
+        title: t('footer.sections.other.title'),
         links: [
-            {
-                text: t('footer.sections.account.signIn'),
-                href: '#',
-            },
-            {
-                text: t('footer.sections.account.signUp'),
-                href: '#',
-            },
-            {
-                text: t('footer.sections.account.cabinet'),
-                href: '#',
-            },
+            { text: t('footer.sections.other.myAnimeList'), href: '/my-anime-list' },
         ],
     },
     {
         title: t('footer.sections.document.title'),
         links: [
-            { text: t('footer.sections.document.userAgreement'), href: '#' },
-            { text: t('footer.sections.document.privacyPolicy'), href: '#' },
-            { text: t('footer.sections.document.termsOfUse'), href: '#' },
+            { text: t('footer.sections.document.privacyPolicy'), href: '/documents/privacy-policy' },
+            { text: t('footer.sections.document.termsOfUse'), href: '/documents/terms-of-service' },
+            { text: t('footer.sections.document.userAgreement'), href: '/documents/user-agreement' },
         ],
     },
 ]);
@@ -75,7 +64,7 @@ const sections = computed(() => [
                                     class="text-left"
                                 >
                                     <NuxtLink
-                                        :to="link.href"
+                                        :to="localeRoute(link.href)"
                                         class="hover:underline"
                                         :aria-label="link.text"
                                     >

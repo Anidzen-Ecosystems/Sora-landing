@@ -3,7 +3,7 @@
   "menu": {
     "main": "Главная",
     "contact_us": "Связаться с нами",
-    "faq": "FAQ"
+    "faq": "ЧЗВ"
   },
   "primary_title": {
     "title": "Sora.QL - Простой и быстрый GraphQL API для аниме",
@@ -16,6 +16,8 @@
     "playgroundButton": "Playground"
   },
   "faq": {
+    "title": "Часто задаваемые вопросы",
+    "description": "Здесь вы найдете ответы на самые распространенные вопросы о нашей платформе.",
     "language_support": {
       "label": "Есть ли поддержка нескольких языков в API?",
       "content": "Sora.QL API поддерживает несколько языков, включая английский, армянский, русский и другие. Мы используем Google Translate API для перевода данных, обеспечивая поддержку множества языков для вашего удобства."
@@ -59,7 +61,7 @@
       },
       "other": {
         "title": "Дополнительно",
-        "myAnimeList": "MyAnimeList.net",
+        "myAnimeList": "MyAnimeList.net"
       },
       "document": {
         "title": "Документы",

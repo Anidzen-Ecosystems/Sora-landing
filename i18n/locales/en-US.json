@@ -15,6 +15,8 @@
     "playgroundButton": "Playground"
   },
   "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Here you'll find answers to the most common questions about our platform.",
     "language_support": {
       "label": "Is there multilingual support in the API?",
       "content": "Sora.QL API supports multiple languages, including English, Armenian, Russian, and others. We use the Google Translate API to translate data, ensuring support for many languages for your convenience."

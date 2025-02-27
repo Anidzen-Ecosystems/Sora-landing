@@ -10,7 +10,7 @@ const { t } = useI18n();
                 <p class="text-lg">{{ t('cta.description') }}</p>
             </div>
             <div class="flex justify-center gap-6">
-                <UButton to="/" size="xl" variant="outlined">
+                <UButton to="/" size="xl" variant="soft">
                     {{ t('cta.start_using_api') }}
                 </UButton>
                 <UButton to="/" variant="soft" size="xl">

@@ -38,18 +38,18 @@ useHead({
 
 <template>
     <NuxtLoadingIndicator color="gray" />
-        <CommonHeader/>
-        <NuxtLayout>
-            <nuxtPage />
-        </NuxtLayout>
-        <CommonFooter/>
+    <CommonHeader />
+    <NuxtLayout>
+        <nuxtPage />
+    </NuxtLayout>
+    <CommonFooter />
     <UModals />
     <UNotifications />
 </template>
 
 <style>
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

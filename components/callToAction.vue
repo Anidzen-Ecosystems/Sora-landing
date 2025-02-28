@@ -6,7 +6,9 @@ const { t } = useI18n();
     <section class="bg-primary text-white py-16 mt-5">
         <UContainer>
             <div class="text-center mb-8">
-                <h2 class="text-4xl font-semibold mb-2">{{ t('cta.title') }}</h2>
+                <h2 class="text-4xl font-semibold mb-2">
+                    {{ t('cta.title') }}
+                </h2>
                 <p class="text-lg">{{ t('cta.description') }}</p>
             </div>
             <div class="flex justify-center gap-6">

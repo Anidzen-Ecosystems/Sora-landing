@@ -4,8 +4,10 @@ export default defineNuxtConfig({
 
     app: {
         head: {
-            link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' }],
-        }
+            link: [
+                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' },
+            ],
+        },
     },
 
     modules: [
@@ -14,7 +16,6 @@ export default defineNuxtConfig({
         'nuxt-time',
         '@nuxt/image',
         '@nuxtjs/i18n',
-        'nuxt-highcharts',
     ],
 
     i18n: {

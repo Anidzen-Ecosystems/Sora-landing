@@ -4,7 +4,6 @@ export const useScrollToSection = () => {
     const scrollToSection = (id: string) => {
         const element = document.querySelector(id);
         if (element) {
-            // Добавление небольшой задержки
             setTimeout(() => {
                 element.scrollIntoView({ behavior: 'smooth' });
             }, 50);

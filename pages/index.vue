@@ -2,7 +2,6 @@
 
 <template>
     <PrimaryHeader />
-    <Overview />
     <p>Features</p>
     <br />
     <p>How It Works</p>

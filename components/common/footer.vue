@@ -9,7 +9,7 @@ const sections = computed(() => [
         title: t('footer.sections.other.title'),
         links: [
             {
-                text: t('footer.sections.other.myAnimeList'),
+                text: t('footer.sections.other.my_anime_list'),
                 href: '/my-anime-list',
             },
         ],
@@ -18,15 +18,15 @@ const sections = computed(() => [
         title: t('footer.sections.document.title'),
         links: [
             {
-                text: t('footer.sections.document.privacyPolicy'),
+                text: t('footer.sections.document.privacy_policy'),
                 href: '/documents/privacy-policy',
             },
             {
-                text: t('footer.sections.document.termsOfUse'),
+                text: t('footer.sections.document.terms_of_use'),
                 href: '/documents/terms-of-service',
             },
             {
-                text: t('footer.sections.document.userAgreement'),
+                text: t('footer.sections.document.user_agreement'),
                 href: '/documents/user-agreement',
             },
         ],
@@ -62,7 +62,7 @@ const sections = computed(() => [
                             Sora.ql
                         </span>
                     </NuxtLink>
-                    <h5 class="mt-2 opacity-50 md:max-w-xl">
+                    <h5 class="mt-2 md:max-w-xl">
                         {{ t('footer.rights_reserved') }}
                     </h5>
                 </div>
@@ -73,20 +73,17 @@ const sections = computed(() => [
                         <h3 class="mb-2 font-medium text-primary text-xl">
                             {{ section.title }}
                         </h3>
-                        <ul class="text-sm flex flex-col gap-1">
+                        <ul class="flex flex-col gap-1">
                             <li v-for="link in section.links" :key="link.href">
-                                <ULink
-                                    :disabled="link.disabled"
-                                    class="text-left"
-                                >
                                     <UButton
                                         variant="link"
+                                        class="text-black dark:text-white"
+                                        :padded="false"
                                         :to="localeRoute(link.href)"
                                         :aria-label="link.text"
                                     >
                                         {{ link.text }}
                                     </UButton>
-                                </ULink>
                             </li>
                         </ul>
                     </div>
@@ -96,11 +93,11 @@ const sections = computed(() => [
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span>
                     © <span class="text-primary">2024-{{ currentYear }}</span>
-                    Anidzen Ecosystems
+                     {{ t('footer.copyright') }}
                 </span>
                 <div
                     class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
-                >Сделано с любовью 💖</div>
+                >{{ t('footer.made_with_love') }} 💖</div>
             </div>
         </UContainer>
     </UCard>

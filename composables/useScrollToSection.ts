@@ -4,17 +4,16 @@ export const useScrollToSection = () => {
     const scrollToSection = (id: string) => {
         const element = document.querySelector(id);
         if (element) {
-            // Добавление небольшой задержки
             setTimeout(() => {
-                element.scrollIntoView({ behavior: "smooth" });
+                element.scrollIntoView({ behavior: 'smooth' });
             }, 50);
-        } else if (id === "#") {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else if (id === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 console.log(`Intersecting section: ${entry.target.id}`);
                 activeSection.value = `#${entry.target.id}`;
@@ -29,7 +28,7 @@ export const useScrollToSection = () => {
         });
 
         const sections = document.querySelectorAll('[id].section');
-        sections.forEach(section => observer.observe(section));
+        sections.forEach((section) => observer.observe(section));
     };
 
     onMounted(() => {

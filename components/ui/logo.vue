@@ -1,15 +1,23 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <svg class="svg-responsive" version="1.0" xmlns="http://www.w3.org/2000/svg"
-       width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000"
-       preserveAspectRatio="xMidYMid meet">
-
-    <g class="" transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
-       stroke="none" fill="#60A5FA">
-      <path d="M4845 9884 c-1213 -77 -2317 -570 -3158 -1407 -778 -776 -1247 -1760
+    <svg
+        class="svg-responsive"
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="1024.000000pt"
+        height="1024.000000pt"
+        viewBox="0 0 1024.000000 1024.000000"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <g
+            class=""
+            transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+            stroke="none"
+            fill="#60A5FA"
+        >
+            <path
+                d="M4845 9884 c-1213 -77 -2317 -570 -3158 -1407 -778 -776 -1247 -1760
             -1374 -2882 -24 -210 -24 -730 0 -940 102 -901 417 -1698 948 -2395 743 -977
             1839 -1632 3068 -1835 289 -48 434 -59 786 -59 352 0 497 11 786 59 1920 317
             3450 1723 3904 3587 96 395 129 679 129 1113 0 434 -33 718 -129 1113 -329
@@ -29,21 +37,22 @@
             -2 380 -16z m2060 -4206 l2 -318 -1095 0 -1095 0 2 -617 3 -618 1468 -3 1467
             -2 0 -320 0 -320 -3190 0 -3190 0 0 323 0 322 1430 -3 1430 -2 0 620 0 620
             -1088 0 c-599 0 -1091 2 -1093 4 -2 2 -3 146 -1 320 l3 316 2472 -2 2472 -3 3
-            -317z"/>
-    </g>
-  </svg>
+            -317z"
+            />
+        </g>
+    </svg>
 </template>
 
 <style scoped>
 .svg-responsive {
-  width: 65px;
-  overflow: hidden;
-  border-radius: 110%;
-  background: white;
-  height: auto;
+    width: 65px;
+    overflow: hidden;
+    border-radius: 110%;
+    background: white;
+    height: auto;
 }
 
 .fill-primary {
-  fill: rgb(var(--color-primary-400));
+    fill: rgb(var(--color-primary-400));
 }
 </style>

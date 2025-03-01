@@ -41,20 +41,18 @@ const items = computed(() => [
 ]);
 </script>
 
-
 <template>
     <section id="frequently-asked-questions" class="section">
         <UContainer v-if="items.length">
             <div class="mb-5">
-                <h2 class="text-4xl font-semibold text-primary">{{ t('faq.title') }}</h2>
-                <p class="text-gray-600 dark:text-gray-400">{{ t('faq.description') }}</p>
+                <h2 class="text-4xl font-semibold text-primary">
+                    {{ t('faq.title') }}
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400">
+                    {{ t('faq.description') }}
+                </p>
             </div>
-            <UAccordion
-                color="primary"
-                variant="soft"
-                size="xl"
-                :items="items" >
-
+            <UAccordion color="primary" variant="soft" size="xl" :items="items">
                 <template #item="{ item }">
                     <p class="text-gray-600 dark:text-gray-400 text-base">
                         {{ item.content }}
@@ -64,4 +62,3 @@ const items = computed(() => [
         </UContainer>
     </section>
 </template>
-

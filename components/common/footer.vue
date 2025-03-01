@@ -16,15 +16,27 @@ const sections = computed(() => [
     {
         title: t('footer.sections.other.title'),
         links: [
-            { text: t('footer.sections.other.myAnimeList'), href: '/my-anime-list' },
+            {
+                text: t('footer.sections.other.myAnimeList'),
+                href: '/my-anime-list',
+            },
         ],
     },
     {
         title: t('footer.sections.document.title'),
         links: [
-            { text: t('footer.sections.document.privacyPolicy'), href: '/documents/privacy-policy' },
-            { text: t('footer.sections.document.termsOfUse'), href: '/documents/terms-of-service' },
-            { text: t('footer.sections.document.userAgreement'), href: '/documents/user-agreement' },
+            {
+                text: t('footer.sections.document.privacyPolicy'),
+                href: '/documents/privacy-policy',
+            },
+            {
+                text: t('footer.sections.document.termsOfUse'),
+                href: '/documents/terms-of-service',
+            },
+            {
+                text: t('footer.sections.document.userAgreement'),
+                href: '/documents/user-agreement',
+            },
         ],
     },
 ]);
@@ -35,13 +47,25 @@ const sections = computed(() => [
         <UContainer>
             <div class="md:flex md:justify-between md:gap-5">
                 <div class="mb-6 md:mb-0">
-                    <NuxtLink to="https://github.com/Anidzen-Ecosystems" class="flex items-center">
-                        <NuxtImg src="/icons/anidzen.svg" class="w-10 filter select-none"/>
+                    <NuxtLink
+                        to="https://github.com/Anidzen-Ecosystems"
+                        class="flex items-center"
+                    >
+                        <NuxtImg
+                            src="/icons/anidzen.svg"
+                            class="w-10 filter select-none"
+                        />
                         <span class="ml-2 uppercase font-medium text-primary">
                             Anidzen
                         </span>
-                        <UIcon name="i-heroicons-x-mark" class="text-3xl font-bold px-5 select-none"></UIcon>
-                        <NuxtImg src="/icons/sora.svg" class="w-10 filter select-none "/>
+                        <UIcon
+                            name="i-heroicons-x-mark"
+                            class="text-3xl font-bold px-5 select-none"
+                        ></UIcon>
+                        <NuxtImg
+                            src="/icons/sora.svg"
+                            class="w-10 filter select-none"
+                        />
                         <span class="ml-2 uppercase font-medium text-primary">
                             Sora.ql
                         </span>
@@ -86,8 +110,7 @@ const sections = computed(() => [
                 </span>
                 <div
                     class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
-                >
-                </div>
+                ></div>
             </div>
         </UContainer>
     </UCard>

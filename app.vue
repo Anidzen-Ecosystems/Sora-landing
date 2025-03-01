@@ -37,12 +37,15 @@ useHead({
 </script>
 
 <template>
-    <NuxtLoadingIndicator color="gray" />
+    <NuxtLoadingIndicator color="blue" />
     <CommonHeader />
+
     <NuxtLayout>
         <nuxtPage />
     </NuxtLayout>
+
     <CommonFooter />
+
     <UModals />
     <UNotifications />
 </template>

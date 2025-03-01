@@ -1,14 +1,6 @@
 <script setup lang="ts">
-import { watch } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useNuxtApp } from '#app';
-
 const localeRoute = useLocaleRoute();
-const config = useRuntimeConfig();
-const { t, locale } = useI18n();
-const { $socialNetworksService } = useNuxtApp();
-
-const socialLinks = ref([]);
+const { t } = useI18n();
 
 const currentYear = computed(() => new Date().getFullYear());
 
@@ -71,46 +63,44 @@ const sections = computed(() => [
                         </span>
                     </NuxtLink>
                     <h5 class="mt-2 opacity-50 md:max-w-xl">
-                        {{ $t('footer.rights_reserved') }}
+                        {{ t('footer.rights_reserved') }}
                     </h5>
                 </div>
                 <div
                     class="mb-4 lg:mb-0 grid gap-5 sm:gap-4 grid-cols-2 xl:grid-cols-2"
                 >
                     <div v-for="section in sections" :key="section.title">
-                        <h3 class="mb-2 font-medium text-primary">
+                        <h3 class="mb-2 font-medium text-primary text-xl">
                             {{ section.title }}
                         </h3>
-                        <ul class="opacity-50 text-sm flex flex-col gap-1">
+                        <ul class="text-sm flex flex-col gap-1">
                             <li v-for="link in section.links" :key="link.href">
                                 <ULink
                                     :disabled="link.disabled"
                                     class="text-left"
                                 >
-                                    <NuxtLink
+                                    <UButton
+                                        variant="link"
                                         :to="localeRoute(link.href)"
-                                        class="hover:underline"
                                         :aria-label="link.text"
                                     >
                                         {{ link.text }}
-                                    </NuxtLink>
+                                    </UButton>
                                 </ULink>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr
-                class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2"
-            />
+            <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="opacity-50">
-                    © 2024-{{ currentYear }}
-                    {{ $t('footer.copyright') }}
+                <span>
+                    © <span class="text-primary">2024-{{ currentYear }}</span>
+                    Anidzen Ecosystems
                 </span>
                 <div
                     class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
-                ></div>
+                >Сделано с любовью 💖</div>
             </div>
         </UContainer>
     </UCard>

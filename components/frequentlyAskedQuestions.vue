@@ -48,13 +48,13 @@ const items = computed(() => [
                 <h2 class="text-4xl font-semibold text-primary">
                     {{ t('faq.title') }}
                 </h2>
-                <p class="text-gray-600 dark:text-gray-400">
+                <p class="">
                     {{ t('faq.description') }}
                 </p>
             </div>
             <UAccordion color="primary" variant="soft" size="xl" :items="items">
                 <template #item="{ item }">
-                    <p class="text-gray-600 dark:text-gray-400 text-base">
+                    <p class="text-black dark:text-white text-base">
                         {{ item.content }}
                     </p>
                 </template>

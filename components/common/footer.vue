@@ -62,9 +62,9 @@ const sections = computed(() => [
                             Sora.ql
                         </span>
                     </NuxtLink>
-                    <h5 class="mt-2 md:max-w-xl">
+                    <p class="mt-2 md:max-w-xl">
                         {{ t('footer.rights_reserved') }}
-                    </h5>
+                    </p>
                 </div>
                 <div
                     class="mb-4 lg:mb-0 grid gap-5 sm:gap-4 grid-cols-2 xl:grid-cols-2"

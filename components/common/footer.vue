@@ -75,29 +75,31 @@ const sections = computed(() => [
                         </h3>
                         <ul class="flex flex-col gap-1">
                             <li v-for="link in section.links" :key="link.href">
-                                    <UButton
-                                        variant="link"
-                                        class="text-black dark:text-white"
-                                        :padded="false"
-                                        :to="localeRoute(link.href)"
-                                        :aria-label="link.text"
-                                    >
-                                        {{ link.text }}
-                                    </UButton>
+                                <UButton
+                                    variant="link"
+                                    class="text-black dark:text-white"
+                                    :padded="false"
+                                    :to="localeRoute(link.href)"
+                                    :aria-label="link.text"
+                                >
+                                    {{ link.text }}
+                                </UButton>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2" />
+            <hr
+                class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2"
+            />
             <div class="sm:flex sm:items-center sm:justify-between">
                 <span class="flex gap-2 justify-between sm:justify-left">
-                   <span class="text-primary">© 2024-{{ currentYear }}</span>
-                     {{ t('footer.copyright') }}
+                    <span class="text-primary">© 2024-{{ currentYear }}</span>
+                    {{ t('footer.copyright') }}
                 </span>
-                <div
-                    class="hidden sm:flex sm:justify-center gap-3"
-                >{{ t('footer.made_with_love') }} 💖</div>
+                <div class="hidden sm:flex sm:justify-center gap-3">
+                    {{ t('footer.made_with_love') }} 💖
+                </div>
             </div>
         </UContainer>
     </UCard>

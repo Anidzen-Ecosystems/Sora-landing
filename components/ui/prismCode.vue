@@ -4,8 +4,7 @@ import Clipboard from 'clipboard';
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-graphql';
 
-
-const toast = useToast()
+const toast = useToast();
 
 const props = defineProps<{
     code: string;
@@ -22,22 +21,22 @@ const highlight = () => {
         highlightedCode.value = Prism.highlight(
             props.code,
             Prism.languages[props.language || 'javascript'],
-            props.language || 'javascript'
+            props.language || 'javascript',
         );
     }
 };
 
 const initClipboard = () => {
     clipboard = new Clipboard('.copy-button', {
-        text: () => props.code
+        text: () => props.code,
     });
 
     clipboard.on('success', () => {
-        toast.add({ title: 'Код скопирован!' })
+        toast.add({ title: 'Код скопирован!' });
     });
 
     clipboard.on('error', () => {
-        toast.add({ title: 'Не удалось скопировать код.' })
+        toast.add({ title: 'Не удалось скопировать код.' });
     });
 };
 
@@ -56,17 +55,28 @@ onUnmounted(() => {
 </script>
 
 <template>
-
     <div class="mac-window">
         <div v-if="showMacHeader" class="mac-window-header">
             <span class="mac-window-dot red"></span>
             <span class="mac-window-dot yellow"></span>
             <span class="mac-window-dot green"></span>
         </div>
-        <UTooltip v-if="showCopyButton" text="copy" class="absolute right-0 mt-2 mr-2">
-            <UButton color="blue" icon="i-heroicons-clipboard-document-list" variant="soft" class="copy-button" />
+        <UTooltip
+            v-if="showCopyButton"
+            text="copy"
+            class="absolute right-0 mt-2 mr-2"
+        >
+            <UButton
+                color="blue"
+                icon="i-heroicons-clipboard-document-list"
+                variant="soft"
+                class="copy-button"
+            />
         </UTooltip>
-        <pre class="rounded-lg p-4 overflow-auto" :class="`language-${props.language || 'javascript'}`">
+        <pre
+            class="rounded-lg p-4 overflow-auto"
+            :class="`language-${props.language || 'javascript'}`"
+        >
       <code v-html="highlightedCode"></code>
     </pre>
     </div>

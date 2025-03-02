@@ -20,7 +20,13 @@ const { t } = useI18n();
             </div>
             <p class="text-lg text-center mt-5 text-sm italic">
                 {{ t('cta.info_text') }}
-                <UButton to="https://MyAnimeList.net" :padded="false" variant="link" class="text-white" mode="_blank">
+                <UButton
+                    to="https://MyAnimeList.net"
+                    :padded="false"
+                    variant="link"
+                    class="text-white"
+                    mode="_blank"
+                >
                     {{ t('cta.my_anime_list') }}
                 </UButton>
                 {{ t('cta.description_italic') }}

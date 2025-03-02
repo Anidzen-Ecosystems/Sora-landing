@@ -1,7 +1,7 @@
 <script>
 definePageMeta({
     layout: false,
-})
+});
 
 export default {
     head() {
@@ -189,7 +189,6 @@ export default {
         </UContainer>
     </div>
 </template>
-
 
 <style scoped>
 .privacy-policy-content {

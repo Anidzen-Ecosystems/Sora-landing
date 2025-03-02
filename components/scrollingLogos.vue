@@ -74,6 +74,19 @@ const images = [
         to: "https://ota-ku.am",
         alt: "ota-ku.am"
     },
+    {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },   {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },   {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },
 ]
 
 onMounted(() => {

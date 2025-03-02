@@ -57,7 +57,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div class="mac-window">
+    <div class="mac-window rounded-lg">
         <div v-if="showMacHeader" class="mac-window-header">
             <span class="mac-window-dot red"></span>
             <span class="mac-window-dot yellow"></span>
@@ -87,7 +87,6 @@ onUnmounted(() => {
 <style scoped>
 .mac-window {
     position: relative;
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

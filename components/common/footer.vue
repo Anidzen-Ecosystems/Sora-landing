@@ -35,7 +35,7 @@ const sections = computed(() => [
 </script>
 
 <template>
-    <UCard #footer as="footer" class="mt-5 rounded-none">
+    <UCard #footer as="footer" class="">
         <UContainer>
             <div class="md:flex md:justify-between md:gap-5">
                 <div class="mb-6 md:mb-0">
@@ -91,12 +91,12 @@ const sections = computed(() => [
             </div>
             <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span>
-                    © <span class="text-primary">2024-{{ currentYear }}</span>
+                <span class="flex gap-2 justify-between sm:justify-left">
+                   <span class="text-primary">© 2024-{{ currentYear }}</span>
                      {{ t('footer.copyright') }}
                 </span>
                 <div
-                    class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
+                    class="hidden sm:flex sm:justify-center gap-3"
                 >{{ t('footer.made_with_love') }} 💖</div>
             </div>
         </UContainer>

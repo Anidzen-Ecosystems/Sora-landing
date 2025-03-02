@@ -38,13 +38,10 @@ useHead({
 
 <template>
     <NuxtLoadingIndicator color="blue" />
-    <CommonHeader />
 
     <NuxtLayout>
         <nuxtPage />
     </NuxtLayout>
-
-    <CommonFooter />
 
     <UModals />
     <UNotifications />

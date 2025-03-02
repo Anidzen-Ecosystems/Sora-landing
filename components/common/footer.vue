@@ -35,7 +35,7 @@ const sections = computed(() => [
 </script>
 
 <template>
-    <UCard #footer as="footer" class="mt-5 rounded-none">
+    <UCard #footer as="footer" class="">
         <UContainer>
             <div class="md:flex md:justify-between md:gap-5">
                 <div class="mb-6 md:mb-0">
@@ -62,9 +62,9 @@ const sections = computed(() => [
                             Sora.ql
                         </span>
                     </NuxtLink>
-                    <h5 class="mt-2 md:max-w-xl">
+                    <p class="mt-2 md:max-w-xl">
                         {{ t('footer.rights_reserved') }}
-                    </h5>
+                    </p>
                 </div>
                 <div
                     class="mb-4 lg:mb-0 grid gap-5 sm:gap-4 grid-cols-2 xl:grid-cols-2"
@@ -75,29 +75,31 @@ const sections = computed(() => [
                         </h3>
                         <ul class="flex flex-col gap-1">
                             <li v-for="link in section.links" :key="link.href">
-                                    <UButton
-                                        variant="link"
-                                        class="text-black dark:text-white"
-                                        :padded="false"
-                                        :to="localeRoute(link.href)"
-                                        :aria-label="link.text"
-                                    >
-                                        {{ link.text }}
-                                    </UButton>
+                                <UButton
+                                    variant="link"
+                                    class="text-black dark:text-white"
+                                    :padded="false"
+                                    :to="localeRoute(link.href)"
+                                    :aria-label="link.text"
+                                >
+                                    {{ link.text }}
+                                </UButton>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2" />
+            <hr
+                class="border-gray-200 sm:mx-auto dark:border-gray-700 lg:mt-4 lg:mb-2"
+            />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span>
-                    © <span class="text-primary">2024-{{ currentYear }}</span>
-                     {{ t('footer.copyright') }}
+                <span class="flex gap-2 justify-between sm:justify-left">
+                    <span class="text-primary">© 2024-{{ currentYear }}</span>
+                    {{ t('footer.copyright') }}
                 </span>
-                <div
-                    class="hidden sm:flex mt-3 sm:justify-center sm:mt-1 gap-3"
-                >{{ t('footer.made_with_love') }} 💖</div>
+                <div class="hidden sm:flex sm:justify-center gap-3">
+                    {{ t('footer.made_with_love') }} 💖
+                </div>
             </div>
         </UContainer>
     </UCard>

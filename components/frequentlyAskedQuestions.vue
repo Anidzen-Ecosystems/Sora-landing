@@ -9,11 +9,6 @@ const items = computed(() => [
         content: t('faq.data_source.content'),
     },
     {
-        label: t('faq.language_support.label'),
-        icon: 'i-heroicons-language',
-        content: t('faq.language_support.content'),
-    },
-    {
         label: t('faq.multi_language_support.label'),
         icon: 'i-heroicons-code-bracket',
         content: t('faq.multi_language_support.content'),
@@ -45,16 +40,16 @@ const items = computed(() => [
     <section id="frequently-asked-questions" class="section">
         <UContainer v-if="items.length">
             <div class="mb-5">
-                <h2 class="text-4xl font-semibold text-primary">
+                <h3 class="text-4xl font-semibold text-primary">
                     {{ t('faq.title') }}
-                </h2>
-                <p class="text-gray-600 dark:text-gray-400">
+                </h3>
+                <p>
                     {{ t('faq.description') }}
                 </p>
             </div>
             <UAccordion color="primary" variant="soft" size="xl" :items="items">
                 <template #item="{ item }">
-                    <p class="text-gray-600 dark:text-gray-400 text-base">
+                    <p class="text-black dark:text-white text-base">
                         {{ item.content }}
                     </p>
                 </template>

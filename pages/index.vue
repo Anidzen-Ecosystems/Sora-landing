@@ -2,10 +2,13 @@
 
 <template>
     <PrimaryHeader />
-<!--    <p>Features</p>-->
-<!--    <br />-->
-<!--    <p>How It Works</p>-->
+    <ScrollingLogos />
+    <Overview />
+    <!--    <Playground/>-->
+    <!--    <p>Features</p>-->
+    <!--    <br />-->
+    <!--    <p>How It Works</p>-->
     <FrequentlyAskedQuestions />
-<!--    <p>Contact</p>-->
+    <!--    <p>Contact</p>-->
     <CallToAction />
 </template>

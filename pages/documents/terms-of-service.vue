@@ -1,7 +1,27 @@
+<script>
+definePageMeta({
+    layout: false,
+});
+
+export default {
+    head() {
+        return {
+            title: 'Условия использования | Sora.QL',
+            meta: [
+                {
+                    name: 'description',
+                    content: 'Условия использования для Sora.QL',
+                },
+            ],
+        };
+    },
+};
+</script>
+
 <template>
     <div>
         <UContainer>
-            <div class="pt-32">
+            <div class="py-10">
                 <h1 class="text-4xl font-bold mb-2 text-primary">
                     Условия использования
                 </h1>
@@ -109,21 +129,5 @@
         </UContainer>
     </div>
 </template>
-
-<script>
-export default {
-    head() {
-        return {
-            title: 'Условия использования | Sora.QL',
-            meta: [
-                {
-                    name: 'description',
-                    content: 'Условия использования для Sora.QL',
-                },
-            ],
-        };
-    },
-};
-</script>
 
 <style scoped></style>

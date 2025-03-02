@@ -5,6 +5,7 @@ const { t, locale } = useI18n();
 
 let menuItems = [
     { label: t('menu.main'), to: '#main', isButton: true },
+    { label: t('menu.overview'), to: '#overview', isButton: true },
     { label: t('menu.faq'), to: '#frequently-asked-questions', isButton: true },
     { label: t('menu.contact_us'), to: '#contact_us', isButton: true },
 ];
@@ -13,16 +14,20 @@ watch(
     () => locale.value,
     () => {
         menuItems = [
-            { label: t('menu.main'), to: '/' },
+            { label: t('menu.main'), to: '#main', isButton: true },
+            { label: t('menu.overview'), to: '#overview', isButton: true },
+            {
+                label: t('menu.contact_us'),
+                to: '#frequently-asked-questions',
+                isButton: true,
+            },
             { label: t('menu.contact_us'), to: '#contact_us', isButton: true },
         ];
     },
 );
 
-// Наблюдатель для activeSection
 watch(activeSection, (newSection) => {
     console.log('Active section changed to:', newSection);
-    // Здесь можно добавить дополнительные действия, если необходимо.
 });
 </script>
 
@@ -36,19 +41,20 @@ watch(activeSection, (newSection) => {
                     <div>
                         <ULink :to="localeRoute('/')">
                             <div class="flex gap-2 items-center">
-                                <NuxtImg src="/icons/sora.svg" class="w-14" />
-                                <div>
+                                <NuxtImg
+                                    src="/icons/sora.svg"
+                                    class="w-14 pointer-events-none select-none"
+                                />
+                                <div class="flex justify-center flex-col">
                                     <h1 class="text-2xl font-bold uppercase">
                                         {{ t('site_name') }}.<span
                                             class="text-primary"
                                             >QL</span
                                         >
                                     </h1>
-                                    <p
-                                        class="text-xs text-gray-500 dark:text-gray-400"
-                                    >
-                                        1.0.0
-                                    </p>
+                                    <span class="text-sm italic">
+                                        V. 1.0.0
+                                    </span>
                                 </div>
                             </div>
                         </ULink>
@@ -85,6 +91,11 @@ watch(activeSection, (newSection) => {
                             </div>
                         </template>
                     </nav>
+                    <div>
+                        <UButton @click="scrollToSection('#call-to-action')"
+                            >Получить API-ключ</UButton
+                        >
+                    </div>
                 </div>
             </header>
         </UContainer>

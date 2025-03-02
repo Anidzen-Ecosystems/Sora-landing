@@ -11,6 +11,9 @@ export default defineNuxtConfig({
         'nuxt-highcharts',
     ],
 
+    tailwindcss: {
+        configPath: 'tailwind.config.ts',
+    },
 
     i18n: {
         locales: [

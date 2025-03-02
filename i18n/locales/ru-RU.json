@@ -2,6 +2,7 @@
   "site_name": "Sora",
   "menu": {
     "main": "Главная",
+    "overview": "обзор",
     "contact_us": "Связаться с нами",
     "faq": "ЧЗВ"
   },

@@ -45,10 +45,10 @@ const items = computed(() => [
     <section id="frequently-asked-questions" class="section">
         <UContainer v-if="items.length">
             <div class="mb-5">
-                <h2 class="text-4xl font-semibold text-primary">
+                <h3 class="text-4xl font-semibold text-primary">
                     {{ t('faq.title') }}
-                </h2>
-                <p class="">
+                </h3>
+                <p>
                     {{ t('faq.description') }}
                 </p>
             </div>

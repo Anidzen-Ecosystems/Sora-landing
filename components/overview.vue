@@ -37,13 +37,28 @@ query anime {
                             {{ t('overview.description') }}
                         </p>
                         <p class="mt-4">
-                            Мы не коммерческий проект. Наша цель — предоставить открытый и бесплатный доступ к данным о любимых аниме для всех пользователей, а также дать разработчикам возможность интегрировать эти данные в свои проекты без коммерческой выгоды. Мы ориентированы на сообщество и стремимся сделать мир аниме более доступным.
+                            Мы не коммерческий проект. Наша цель — предоставить
+                            открытый и бесплатный доступ к данным о любимых
+                            аниме для всех пользователей, а также дать
+                            разработчикам возможность интегрировать эти данные в
+                            свои проекты без коммерческой выгоды. Мы
+                            ориентированы на сообщество и стремимся сделать мир
+                            аниме более доступным.
                         </p>
                         <div class="mt-4 flex gap-3">
-                            <UButton size="xl" icon="i-heroicons-key" @click="scrollToSection('#call-to-action')">
+                            <UButton
+                                size="xl"
+                                icon="i-heroicons-key"
+                                @click="scrollToSection('#call-to-action')"
+                            >
                                 {{ t('overview.cta.buttonGetAPI') }}
                             </UButton>
-                            <UButton size="xl" variant="soft" target="_blank" to="https://myanimelist.net">
+                            <UButton
+                                size="xl"
+                                variant="soft"
+                                target="_blank"
+                                to="https://myanimelist.net"
+                            >
                                 {{ t('overview.cta.buttonMAL') }}
                             </UButton>
                         </div>

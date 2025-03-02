@@ -75,10 +75,7 @@ onUnmounted(() => {
                 class="copy-button"
             />
         </UTooltip>
-        <pre
-            class="py-4"
-            :class="`language-${props.language || 'javascript'}`"
-        >
+        <pre class="py-4" :class="`language-${props.language || 'javascript'}`">
       <code v-html="highlightedCode"></code>
     </pre>
     </div>

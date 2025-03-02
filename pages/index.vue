@@ -2,6 +2,7 @@
 
 <template>
     <PrimaryHeader />
+    <ScrollingLogos />
     <Overview />
     <!--    <Playground/>-->
     <!--    <p>Features</p>-->

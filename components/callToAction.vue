@@ -5,7 +5,7 @@ const { t } = useI18n();
 <template>
     <section
         id="call-to-action"
-        class="bg-primary text-white py-16 mt-5 section"
+        class="bg-primary text-white py-16 section"
     >
         <UContainer>
             <div class="text-center mb-5">

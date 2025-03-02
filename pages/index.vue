@@ -4,6 +4,7 @@
     <PrimaryHeader />
     <ScrollingLogos />
     <Overview />
+    <HowItWorks/>
     <Showcase/>
     <!--    <Playground/>-->
     <!--    <p>Features</p>-->

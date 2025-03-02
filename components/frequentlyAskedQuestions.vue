@@ -37,7 +37,7 @@ const items = computed(() => [
 </script>
 
 <template>
-    <section id="frequently-asked-questions" class="section">
+    <section id="frequently-asked-questions" class="section mb-10">
         <UContainer v-if="items.length">
             <div class="mb-5">
                 <h3 class="text-4xl font-semibold text-primary">

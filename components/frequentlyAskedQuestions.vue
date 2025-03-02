@@ -9,11 +9,6 @@ const items = computed(() => [
         content: t('faq.data_source.content'),
     },
     {
-        label: t('faq.language_support.label'),
-        icon: 'i-heroicons-language',
-        content: t('faq.language_support.content'),
-    },
-    {
         label: t('faq.multi_language_support.label'),
         icon: 'i-heroicons-code-bracket',
         content: t('faq.multi_language_support.content'),

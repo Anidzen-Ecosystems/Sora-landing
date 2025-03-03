@@ -15,8 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-
 const images = [
     {
         src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
@@ -70,6 +68,19 @@ const images = [
         alt: "ota-ku.am"
     },
     {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },
+    {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },   {
+        src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
+        to: "https://ota-ku.am",
+        alt: "ota-ku.am"
+    },   {
         src: "https://raw.githubusercontent.com/KU-OTA-KU/Design-assets/refs/heads/main/new/ota-ku-red.png",
         to: "https://ota-ku.am",
         alt: "ota-ku.am"

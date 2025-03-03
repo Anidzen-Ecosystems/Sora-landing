@@ -77,7 +77,7 @@ const sections = computed(() => [
                             <li v-for="link in section.links" :key="link.href">
                                 <UButton
                                     variant="link"
-                                    class="text-black dark:text-white"
+                                    class="text-black dark:text-white font-normal text-base"
                                     :padded="false"
                                     :to="localeRoute(link.href)"
                                     :aria-label="link.text"

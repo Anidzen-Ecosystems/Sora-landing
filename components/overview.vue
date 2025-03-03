@@ -64,7 +64,6 @@ query anime {
                         </div>
                     </div>
                 </div>
-
                 <div class="w-1/2">
                     <UiPrismCode
                         :code="graphqlCode"

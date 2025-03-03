@@ -1,57 +1,54 @@
 <script setup lang="ts">
+import mermaid from 'mermaid';
+import { onMounted } from 'vue';
 const { t } = useI18n();
 
-const steps = [
-    {
-        icon: "🟣",
-        titleKey: "how_it_works.step1.title",
-        descriptionKey: "how_it_works.step1.description",
-    },
-    {
-        icon: "🟡",
-        titleKey: "how_it_works.step2.title",
-        descriptionKey: "how_it_works.step2.description",
-    },
-    {
-        icon: "🔵",
-        titleKey: "how_it_works.step3.title",
-        descriptionKey: "how_it_works.step3.description",
-    },
-    {
-        icon: "🟠",
-        titleKey: "how_it_works.step4.title",
-        descriptionKey: "how_it_works.step4.description",
-    },
-    {
-        icon: "🟢",
-        titleKey: "how_it_works.step5.title",
-        descriptionKey: "how_it_works.step5.description",
-    },
-    {
-        icon: "🔴",
-        titleKey: "how_it_works.step6.title",
-        descriptionKey: "how_it_works.step6.description",
-    },
-];
+onMounted(() => {
+    mermaid.init(undefined, '.mermaid');
+});
 </script>
 
 <template>
-    <section class="py-16 mb-10">
+    <section id="how-it-works" class="section mb-10">
         <UContainer>
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-semibold text-primary">{{ t('how_it_works.title') }}</h3>
-                <p class="text-lg">{{ t('how_it_works.subtitle') }}</p>
-            </div>
+            <div class="flex gap-5">
+                <div class="w-1/2">
+                    <div class="mermaid">
+                        graph TD;
+                        A[👤 {{ t('how_it_works.graphql.user_request') }}] -->|📩 {{ t('how_it_works.graphql.cache_check') }}| B[🌐 GraphQL API];
+                        B -->|🛑 {{ t('how_it_works.graphql.cache_check') }}| D[⚡ Redis];
+                        D -->|✅ {{ t('how_it_works.graphql.cache_found') }}| B;
+                        D -->|❌ {{ t('how_it_works.graphql.cache_miss') }}| E[🔍 Sora-парсер];
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div
-                    v-for="step in steps"
-                    :key="step.titleKey"
-                    class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out flex flex-col items-center text-center"
-                >
-                    <span class="text-5xl">{{ step.icon }}</span>
-                    <h3 class="text-xl font-semibold mt-4">{{ t(step.titleKey) }}</h3>
-                    <p class="text-gray-600 mt-2">{{ t(step.descriptionKey) }}</p>
+                        E -->|🛑 {{ t('how_it_works.graphql.cache_check') }}| D;
+                        D -->|✅ {{ t('how_it_works.graphql.cache_found') }}| E;
+
+                        E -->|💾 {{ t('how_it_works.graphql.database_check') }}| H[🗄️ MySQL / MongoDB];
+                        H -->|✅ {{ t('how_it_works.graphql.database_found') }}| E;
+                        H -->|❌ {{ t('how_it_works.graphql.database_miss') }}| F[🌍 MyAnimeList API];
+
+                        F -->|📨 {{ t('how_it_works.graphql.api_request') }}| G[🛠️ {{ t('how_it_works.graphql.data_processing') }}];
+                        G -->|💾 {{ t('how_it_works.graphql.save_data') }}| H & D;
+                        G -->|🚀 {{ t('how_it_works.graphql.send_data') }}| E;
+
+                        E -->|📤 {{ t('how_it_works.graphql.send_data') }}| B;
+                        B -->|📤 {{ t('how_it_works.graphql.user_request') }}| A;
+                    </div>
+                </div>
+                <div class="w-1/2">
+                    <div>
+                        <h3 class="text-right text-4xl font-semibold text-primary">{{ t('how_it_works.title') }}</h3>
+                        <p class="text-right text-lg">{{ t('how_it_works.subtitle') }}</p>
+                        <ul class="list-decimal ml-6 mt-5">
+                            <li>{{ t('how_it_works.details.step_1') }}</li>
+                            <li>{{ t('how_it_works.details.step_2') }}</li>
+                            <li>{{ t('how_it_works.details.step_3') }}</li>
+                            <li>{{ t('how_it_works.details.step_4') }}</li>
+                            <li>{{ t('how_it_works.details.step_5') }}</li>
+                            <li>{{ t('how_it_works.details.step_6') }}</li>
+                            <li>{{ t('how_it_works.details.step_7') }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </UContainer>

@@ -6,6 +6,7 @@ const { t, locale } = useI18n();
 let menuItems = [
     { label: t('menu.main'), to: '#main', isButton: true },
     { label: t('menu.overview'), to: '#overview', isButton: true },
+    { label: t('menu.how_it_works'), to: '#how-it-works', isButton: true },
     { label: t('menu.showcase'), to: '#showcase', isButton: true },
     { label: t('menu.faq'), to: '#frequently-asked-questions', isButton: true },
     { label: t('menu.contact_us'), to: '#contact_us', isButton: true },
@@ -17,6 +18,7 @@ watch(
         menuItems = [
             { label: t('menu.main'), to: '#main', isButton: true },
             { label: t('menu.overview'), to: '#overview', isButton: true },
+            { label: t('menu.how_it_works'), to: '#how-it-works', isButton: true },
             { label: t('menu.showcase'), to: '#showcase', isButton: true },
             { label: t('menu.contact_us'), to: '#frequently-asked-questions', isButton: true, },
             { label: t('menu.contact_us'), to: '#contact_us', isButton: true },

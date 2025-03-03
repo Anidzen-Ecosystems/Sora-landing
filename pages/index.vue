@@ -5,10 +5,9 @@
     <ScrollingLogos />
     <Overview />
     <HowItWorks/>
+    <AboutUs/>
     <Showcase/>
-    <!--    <Playground/>-->
     <!--    <p>Features</p>-->
-    <!--    <br />-->
     <FrequentlyAskedQuestions />
     <!--    <p>Contact</p>-->
     <CallToAction />

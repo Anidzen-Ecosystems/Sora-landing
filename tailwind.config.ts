@@ -4,6 +4,15 @@ import type { Config } from 'tailwindcss';
 export default <Partial<Config>>{
     theme: {
         extend: {
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(var(--float-distance, 0px))' },
+                    '50%': { transform: 'translateY(calc(var(--float-distance, 0px) * -1))' },
+                },
+            },
+            animation: {
+                float: 'float var(--float-duration, 2s) ease-in-out infinite',
+            },
             colors: {
                 bigStone: {
                     50: '#fcf7f0',

@@ -1,16 +1,6 @@
 <template>
     <div class="marquee w-dvw mb-10 overflow-hidden relative">
-        <ul class="marquee-content" ref="marqueeContent">
-            <li
-                v-for="(image, index) in images"
-                :key="index"
-                class="opacity-20 brightness-0 grayscale hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all hover:cursor-pointer"
-            >
-                <NuxtLink :to="image.to" target="_blank">
-                    <img class="w-40" :src="image.src" :alt="image.alt" />
-                </NuxtLink>
-            </li>
-        </ul>
+         <UiMarquee :images="images" :elementsDisplayed="5" />
     </div>
 </template>
 

@@ -2,11 +2,11 @@
 const { t } = useI18n();
 const { scrollToSection } = useScrollToSection();
 
-import { GET_ANIME_QUERY } from '~/graphql/getAnimeQueryOne';
+import
+ { GET_ANIME_QUERY } from '~/graphql/getAnimeQueryOne';
 
 const graphqlCode = GET_ANIME_QUERY;
 </script>
-
 <template>
     <section id="overview" class="section mb-10">
         <UContainer>

@@ -2,26 +2,9 @@
 const { t } = useI18n();
 const { scrollToSection } = useScrollToSection();
 
-const graphqlCode = `
-query anime {
-  anime(id: 48468) {
-    id
-    slug
-    malUrl
-    name
-    synonyms
-    images {
-      jpg {
-        imageUrl
-      }
-      webp {
-        largeImageUrl
-      }
-    }
-    genres
-  }
-}
-`;
+import { GET_ANIME_QUERY } from '~/graphql/getAnimeQueryOne';
+
+const graphqlCode = GET_ANIME_QUERY;
 </script>
 
 <template>
@@ -37,13 +20,7 @@ query anime {
                             {{ t('overview.description') }}
                         </p>
                         <p class="mt-4">
-                            Мы не коммерческий проект. Наша цель — предоставить
-                            открытый и бесплатный доступ к данным о любимых
-                            аниме для всех пользователей, а также дать
-                            разработчикам возможность интегрировать эти данные в
-                            свои проекты без коммерческой выгоды. Мы
-                            ориентированы на сообщество и стремимся сделать мир
-                            аниме более доступным.
+                            {{ t ('overview.no-commerce')}}
                         </p>
                         <div class="mt-4 flex gap-3">
                             <UButton
@@ -65,9 +42,10 @@ query anime {
                     </div>
                 </div>
                 <div class="w-1/2">
-                    <UiPrismCode
+                    <UiCodeBlock
                         :code="graphqlCode"
                         language="graphql"
+                        background-color="#212a3b"
                         show-mac-header
                         show-copy-button
                     />

@@ -1,5 +1,11 @@
 {
   "site_name": "Sora",
+  "common": {
+    "copy": "Копировать",
+    "copy_failed": "",
+    "paste": "Вставить",
+    "copied": "Скопировано"
+  },
   "menu": {
     "main": "Главная",
     "overview": "обзор",

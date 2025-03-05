@@ -45,6 +45,7 @@ const graphqlCode = GET_ANIME_QUERY;
                     <UiCodeBlock
                         :code="graphqlCode"
                         language="graphql"
+                        background-color="#212a3b"
                         show-mac-header
                         show-copy-button
                     />

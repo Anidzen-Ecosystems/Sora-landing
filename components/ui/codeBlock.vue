@@ -2,7 +2,7 @@
 import Prism from 'prismjs';
 import Clipboard from 'clipboard';
 import 'prismjs/themes/prism-tomorrow.css';
-import 'prismjs/components/prism-graphql';
+import 'prismjs/components/prism-graphql.js';
 
 const { t } = useI18n();
 const toast = useToast();
@@ -16,13 +16,20 @@ const props = defineProps<{
 }>();
 
 const isCopied = ref(false);
+const highlightedCode = ref('');
 let clipboard: Clipboard | null = null;
 
-const highlightedCode = computed(() =>
-    props.code
-        ? Prism.highlight(props.code.trimEnd(), Prism.languages[props.language || 'javascript'], props.language || 'javascript')
-        : ''
-);
+const highlight = () => {
+    if (props.code) {
+        const trimmedCode = props.code.trimEnd();
+
+        highlightedCode.value = Prism.highlight(
+            trimmedCode,
+            Prism.languages[props.language || 'javascript'],
+            props.language || 'javascript',
+        );
+    }
+};
 
 const copyCode = () => {
     if (!clipboard) {
@@ -44,6 +51,10 @@ const copyCode = () => {
         });
     }
 };
+
+onMounted(() => {
+    highlight();
+});
 
 onUnmounted(() => {
     clipboard?.destroy();
@@ -70,7 +81,8 @@ onUnmounted(() => {
             />
         </UTooltip>
         <pre class="py-4" :class="`language-${props.language}`"  :style="{ backgroundColor: props.backgroundColor || '#212a3b' }">
-            <code v-html="highlightedCode"></code>
+             <code v-text="props.code" v-if="!highlightedCode"></code>
+             <code v-html="highlightedCode" v-else></code>
         </pre>
     </div>
 </template>

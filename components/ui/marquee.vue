@@ -1,13 +1,14 @@
 <template>
-    <div :class="`marquee--${itemsCount}`" class="marquee" :style="maskStyle">
+    <div class="marquee" :class="`marquee--${itemsCount}`" :style="marqueeStyle">
         <img
             v-for="(item, index) in items"
             :key="index"
             class="marquee__item"
             :src="item.src"
             :alt="item.alt"
-            :width="item.width"
-            :height="item.height"
+            :width="itemWidth"
+            :height="itemHeight"
+            :style="itemStyle(index)"
         />
     </div>
 </template>
@@ -19,12 +20,24 @@ export default {
             type: Array,
             required: true,
             validator(value) {
-                return value.every(item => item.src && item.alt && item.width && item.height);
+                return value.every(item => item.src && item.alt);
             },
         },
         itemsCount: {
             type: Number,
             default: 8,
+        },
+        itemWidth: {
+            type: Number,
+            default: 100,
+        },
+        itemHeight: {
+            type: Number,
+            default: 100,
+        },
+        duration: {
+            type: Number,
+            default: 36,
         },
         maskSides: {
             type: Boolean,
@@ -32,14 +45,25 @@ export default {
         },
     },
     computed: {
-        maskStyle() {
-            if (this.maskSides) {
-                return {
-                    maskImage: 'linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0))',
-                };
-            } else {
-                return {};
-            }
+        marqueeStyle() {
+            return {
+                '--marquee-items': this.itemsCount,
+                '--marquee-item-width': `${this.itemWidth}px`,
+                '--marquee-item-height': `${this.itemHeight}px`,
+                '--marquee-duration': `${this.duration}s`,
+                ...(this.maskSides
+                    ? {
+                        maskImage: 'linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0))',
+                    }
+                    : {}),
+            };
+        },
+    },
+    methods: {
+        itemStyle(index) {
+            return {
+                '--marquee-item-index': index + 1,
+            };
         },
     },
 };
@@ -49,30 +73,8 @@ export default {
 .marquee {
     display: flex;
     block-size: var(--marquee-item-height);
-    /* margin-block: var(--marquee-item-height); */
     position: relative;
     overflow-x: hidden;
-}
-
-.marquee--8 {
-    --marquee-item-width: 100px;
-    --marquee-item-height: 100px;
-    --marquee-duration: 36s;
-    --marquee-items: 8;
-}
-
-.marquee--3 {
-    --marquee-item-width: 150px;
-    --marquee-item-height: 150px;
-    --marquee-duration: 24s;
-    --marquee-items: 3;
-}
-
-.marquee--6 {
-    --marquee-item-width: 166px;
-    --marquee-item-height: 100px;
-    --marquee-duration: 32s;
-    --marquee-items: 6;
 }
 
 .marquee__item {
@@ -81,94 +83,11 @@ export default {
         calc(100% + var(--marquee-item-width))
     );
     --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+
     position: absolute;
     inset-inline-start: var(--marquee-item-offset);
     transform: translateX(-50%);
     animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-}
-
-.marquee__item:nth-child(4n) {
-    border-top-right-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 1) {
-    border-bottom-right-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 2) {
-    border-bottom-left-radius: 1rem;
-}
-
-.marquee__item:nth-child(4n + 3) {
-    border-top-left-radius: 1rem;
-}
-
-.marquee--8 .marquee__item:nth-of-type(1) {
-    --marquee-item-index: 1;
-}
-
-.marquee--8 .marquee__item:nth-of-type(2) {
-    --marquee-item-index: 2;
-}
-
-.marquee--8 .marquee__item:nth-of-type(3) {
-    --marquee-item-index: 3;
-}
-
-.marquee--8 .marquee__item:nth-of-type(4) {
-    --marquee-item-index: 4;
-}
-
-.marquee--8 .marquee__item:nth-of-type(5) {
-    --marquee-item-index: 5;
-}
-
-.marquee--8 .marquee__item:nth-of-type(6) {
-    --marquee-item-index: 6;
-}
-
-.marquee--8 .marquee__item:nth-of-type(7) {
-    --marquee-item-index: 7;
-}
-
-.marquee--8 .marquee__item:nth-of-type(8) {
-    --marquee-item-index: 8;
-}
-
-.marquee--3 .marquee__item:nth-of-type(1) {
-    --marquee-item-index: 1;
-}
-
-.marquee--3 .marquee__item:nth-of-type(2) {
-    --marquee-item-index: 2;
-}
-
-.marquee--3 .marquee__item:nth-of-type(3) {
-    --marquee-item-index: 3;
-}
-
-.marquee--6 .marquee__item:nth-of-type(1) {
-    --marquee-item-index: 1;
-}
-
-.marquee--6 .marquee__item:nth-of-type(2) {
-    --marquee-item-index: 2;
-}
-
-.marquee--6 .marquee__item:nth-of-type(3) {
-    --marquee-item-index: 3;
-}
-
-.marquee--6 .marquee__item:nth-of-type(4) {
-    --marquee-item-index: 4;
-}
-
-.marquee--6 .marquee__item:nth-of-type(5) {
-    --marquee-item-index: 5;
-}
-
-.marquee--6 .marquee__item:nth-of-type(6) {
-    --marquee-item-index: 6;
 }
 
 @keyframes go {

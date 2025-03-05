@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="absolute -z-10">
+    <div class="absolute">
         <div class="tetris">
             <div
                 v-for="(row, rowIndex) in grid"

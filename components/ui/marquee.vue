@@ -1,118 +1,185 @@
 <template>
-    <div class="marquee w-dvw overflow-hidden relative" :style="marqueeStyles">
-        <ul class="marquee-content" ref="marqueeContent">
-            <li
-                v-for="(image, index) in images"
-                :key="index"
-                class="opacity-20 brightness-0 grayscale hover:grayscale-0 hover:brightness-100 hover:opacity-100 transition-all hover:cursor-pointer"
-            >
-                <NuxtLink :to="image.to" target="_blank">
-                    <img class="w-40" :src="image.src" :alt="image.alt" />
-                </NuxtLink>
-            </li>
-        </ul>
+    <div :class="`marquee--${itemsCount}`" class="marquee" :style="maskStyle">
+        <img
+            v-for="(item, index) in items"
+            :key="index"
+            class="marquee__item"
+            :src="item.src"
+            :alt="item.alt"
+            :width="item.width"
+            :height="item.height"
+        />
     </div>
 </template>
 
-<script setup lang="ts">
-interface Image {
-    src: string;
-    alt: string;
-    to: string;
-}
-
-const props = defineProps({
-    images: {
-        type: Array as () => Image[],
-        required: true,
-        validator(value: any) {
-            return value.every((item: Image) => item.src && item.to && item.alt);
-        }
+<script>
+export default {
+    props: {
+        items: {
+            type: Array,
+            required: true,
+            validator(value) {
+                return value.every(item => item.src && item.alt && item.width && item.height);
+            },
+        },
+        itemsCount: {
+            type: Number,
+            default: 8,
+        },
+        maskSides: {
+            type: Boolean,
+            default: true,
+        },
     },
-    elementsDisplayed: {
-        type: Number,
-        default: 7
+    computed: {
+        maskStyle() {
+            if (this.maskSides) {
+                return {
+                    maskImage: 'linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0))',
+                };
+            } else {
+                return {};
+            }
+        },
     },
-    marqueeWidth: {
-        type: String,
-        default: '80vw'
-    },
-    marqueeHeight: {
-        type: String,
-        default: '20vh'
-    }
-})
-
-const marqueeStyles = computed(() => {
-    const elementWidth = `calc(${props.marqueeWidth} / ${props.elementsDisplayed})`;
-    const animationDuration = `calc(${props.elementsDisplayed} * 5s)`;
-
-    return {
-        '--marquee-width': props.marqueeWidth,
-        '--marquee-height': props.marqueeHeight,
-        '--marquee-elements-displayed': props.elementsDisplayed.toString(),
-        '--marquee-element-width': elementWidth,
-        '--marquee-animation-duration': animationDuration
-    }
-})
-
-const marqueeContent = ref<HTMLElement | null>(null);
-
-onMounted(() => {
-    if (!marqueeContent.value) return;
-
-    const root = document.documentElement;
-    const content = marqueeContent.value;
-    const marqueeElementsDisplayed = props.elementsDisplayed;
-
-    root.style.setProperty('--marquee-elements', content.children.length.toString());
-
-    for (let i = 0; i < marqueeElementsDisplayed; i++) {
-        content.appendChild(content.children[i].cloneNode(true));
-    }
-})
+};
 </script>
 
 <style scoped>
-.marquee-content {
-    list-style: none;
-    height: 100%;
+.marquee {
     display: flex;
-    gap: 20px;
-    animation: scrolling var(--marquee-animation-duration) linear infinite;
+    block-size: var(--marquee-item-height);
+    /* margin-block: var(--marquee-item-height); */
+    position: relative;
+    overflow-x: hidden;
 }
 
-@keyframes scrolling {
-    0% {
-        transform: translateX(0);
+.marquee--8 {
+    --marquee-item-width: 100px;
+    --marquee-item-height: 100px;
+    --marquee-duration: 36s;
+    --marquee-items: 8;
+}
+
+.marquee--3 {
+    --marquee-item-width: 150px;
+    --marquee-item-height: 150px;
+    --marquee-duration: 24s;
+    --marquee-items: 3;
+}
+
+.marquee--6 {
+    --marquee-item-width: 166px;
+    --marquee-item-height: 100px;
+    --marquee-duration: 32s;
+    --marquee-items: 6;
+}
+
+.marquee__item {
+    --marquee-item-offset: max(
+        calc(var(--marquee-item-width) * var(--marquee-items)),
+        calc(100% + var(--marquee-item-width))
+    );
+    --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+    position: absolute;
+    inset-inline-start: var(--marquee-item-offset);
+    transform: translateX(-50%);
+    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
+}
+
+.marquee__item:nth-child(4n) {
+    border-top-right-radius: 1rem;
+}
+
+.marquee__item:nth-child(4n + 1) {
+    border-bottom-right-radius: 1rem;
+}
+
+.marquee__item:nth-child(4n + 2) {
+    border-bottom-left-radius: 1rem;
+}
+
+.marquee__item:nth-child(4n + 3) {
+    border-top-left-radius: 1rem;
+}
+
+.marquee--8 .marquee__item:nth-of-type(1) {
+    --marquee-item-index: 1;
+}
+
+.marquee--8 .marquee__item:nth-of-type(2) {
+    --marquee-item-index: 2;
+}
+
+.marquee--8 .marquee__item:nth-of-type(3) {
+    --marquee-item-index: 3;
+}
+
+.marquee--8 .marquee__item:nth-of-type(4) {
+    --marquee-item-index: 4;
+}
+
+.marquee--8 .marquee__item:nth-of-type(5) {
+    --marquee-item-index: 5;
+}
+
+.marquee--8 .marquee__item:nth-of-type(6) {
+    --marquee-item-index: 6;
+}
+
+.marquee--8 .marquee__item:nth-of-type(7) {
+    --marquee-item-index: 7;
+}
+
+.marquee--8 .marquee__item:nth-of-type(8) {
+    --marquee-item-index: 8;
+}
+
+.marquee--3 .marquee__item:nth-of-type(1) {
+    --marquee-item-index: 1;
+}
+
+.marquee--3 .marquee__item:nth-of-type(2) {
+    --marquee-item-index: 2;
+}
+
+.marquee--3 .marquee__item:nth-of-type(3) {
+    --marquee-item-index: 3;
+}
+
+.marquee--6 .marquee__item:nth-of-type(1) {
+    --marquee-item-index: 1;
+}
+
+.marquee--6 .marquee__item:nth-of-type(2) {
+    --marquee-item-index: 2;
+}
+
+.marquee--6 .marquee__item:nth-of-type(3) {
+    --marquee-item-index: 3;
+}
+
+.marquee--6 .marquee__item:nth-of-type(4) {
+    --marquee-item-index: 4;
+}
+
+.marquee--6 .marquee__item:nth-of-type(5) {
+    --marquee-item-index: 5;
+}
+
+.marquee--6 .marquee__item:nth-of-type(6) {
+    --marquee-item-index: 6;
+}
+
+@keyframes go {
+    to {
+        inset-inline-start: calc(var(--marquee-item-width) * -1);
     }
-    100% {
-        transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
-    }
 }
 
-.marquee-content li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: var(--marquee-element-width);
-    max-height: 100%;
-    font-size: calc(var(--marquee-height) * 3 / 4);
-    white-space: nowrap;
-}
-
-.marquee-content li img {
-    width: 100%;
-}
-
-@media (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
-    .marquee:before,
-    .marquee:after {
-        width: 5rem;
+@media (prefers-reduced-motion) {
+    .marquee__item {
+        animation-play-state: paused;
     }
 }
 </style>

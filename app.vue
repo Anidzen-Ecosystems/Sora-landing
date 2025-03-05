@@ -39,9 +39,11 @@ useHead({
 <template>
     <NuxtLoadingIndicator color="blue" />
 
-    <NuxtLayout>
-        <nuxtPage />
-    </NuxtLayout>
+    <UCard :ui="{ body: { padding: 'p-0 sm:p-0' } }">
+        <NuxtLayout>
+            <NuxtPage />
+        </NuxtLayout>
+    </UCard>
 
     <UModals />
     <UNotifications />

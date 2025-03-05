@@ -66,6 +66,7 @@ onUnmounted(() => {
                 class="copy-button"
                 :disabled="isCopied"
                 @click="copyCode"
+                :aria-label="isCopied ? t('common.copied') : t('common.copy')"
             />
         </UTooltip>
         <pre class="py-4" :class="`language-${props.language}`"  :style="{ backgroundColor: props.backgroundColor || '#212a3b' }">

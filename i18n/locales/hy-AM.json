@@ -2,6 +2,7 @@
   "site_name": "Sora",
   "common": {
     "copy": "Копировать",
+    "copy_failed": "не удалось копировать",
     "paste": "Вставить",
     "copied": "Скопировано"
   },

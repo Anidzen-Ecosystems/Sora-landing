@@ -33,6 +33,10 @@ const copyCode = () => {
         clipboard.on('success', () => {
             isCopied.value = true;
             toast.add({ title: t('common.copied') });
+
+            setTimeout(() => {
+                isCopied.value = false;
+            }, 5000);
         });
 
         clipboard.on('error', () => {

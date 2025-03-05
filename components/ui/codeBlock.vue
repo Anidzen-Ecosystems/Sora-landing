@@ -9,7 +9,7 @@ const toast = useToast();
 
 const props = defineProps<{
     code: string;
-    language?: string;
+    language?: 'php' | 'javascript' | 'typescript' | 'graphql' | 'html' | 'css' | 'json';
     showMacHeader?: boolean;
     showCopyButton?: boolean;
     backgroundColor?: string;

@@ -42,7 +42,6 @@ const initClipboard = () => {
     });
 };
 
-// watch(() => props.code, highlight, { immediate: true });
 onMounted(() => {
     highlight();
     if (props.showCopyButton) {
@@ -75,12 +74,10 @@ onUnmounted(() => {
                 class="copy-button"
             />
         </UTooltip>
-        <pre
-            class="py-4"
-            :class="`language-${props.language || 'javascript'}`"
-        >
-      <code v-html="highlightedCode"></code>
-    </pre>
+        <pre class="py-4" :class="`language-${props.language || 'javascript'}`">
+            <code v-text="props.code" v-if="!highlightedCode"></code>
+            <code v-html="highlightedCode" v-else></code>
+        </pre>
     </div>
 </template>
 

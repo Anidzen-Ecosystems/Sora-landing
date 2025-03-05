@@ -1,6 +1,6 @@
 <template>
     <div class="marquee" :class="`marquee--${itemsCount}`" :style="marqueeStyle">
-        <img
+        <NuxtImg
             v-for="(item, index) in items"
             :key="index"
             class="marquee__item"

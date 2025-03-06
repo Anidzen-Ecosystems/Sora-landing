@@ -57,7 +57,8 @@ const links = [
                 </template>
 
                 <template #right>
-                    <UColorModeButton />
+<!--                    <UColorModeButton />-->
+                    <UiColorModeButton/>
                 </template>
             </UHeader>
         </UContainer>

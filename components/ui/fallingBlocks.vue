@@ -88,16 +88,10 @@ onMounted(() => {
 
 .cell {
     aspect-ratio: 1;
-    transition: all 0.2s;
 }
 
 .filled {
-    opacity: 0.5;
+    opacity: 0.03;
     background-color: rgb(var(--color-primary-400));
-
-    &:hover {
-        opacity: 1;
-        cursor: grab;
-    }
 }
 </style>

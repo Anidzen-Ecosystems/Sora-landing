@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import CodeBlock from '~/components/ui/codeBlock.vue';
 
 const { t } = useI18n();
 const { scrollToSection } = useScrollToSection();
@@ -31,7 +30,7 @@ const items = [
                 align="left"
                 :ui="{ wrapper: 'py-10 sm:py-10' }"
             >
-                <CodeBlock
+                <UiCodeBlock
                     :code="graphqlCode"
                     language="graphql"
                     background-color="#212121"

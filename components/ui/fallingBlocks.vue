@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const rows = 15;
 const cols = 30;
-const numBlocks = 5;
-const spawnInterval = 3000;
+const numBlocks = 2;
+const spawnInterval = 8000;
 const fallInterval = 1000;
 
 const grid = ref<number[][]>(

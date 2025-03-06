@@ -21,7 +21,10 @@ const projects = [
                 class="mb-5"
                 :title="t('showcase.title')"
                 :description="t('showcase.description')"
-                :ui="{container: 'lg:justify-center', description: 'text-center'}"
+                :ui="{
+                    container: 'lg:justify-center',
+                    description: 'text-center',
+                }"
             />
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -31,7 +34,6 @@ const projects = [
                     :ui="{ body: { padding: 'p-0 sm:p-0' } }"
                     class="rounded-lg overflow-hidden cursor-pointer"
                 >
-
                     <ULink :to="project.website" target="_blank">
                         <div class="w-full min-h-64 overflow-hidden">
                             <NuxtImg

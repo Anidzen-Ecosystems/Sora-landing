@@ -34,9 +34,14 @@ export default defineNuxtConfig({
     },
 
     colorMode: {
-        preference: 'light',
-        fallback: 'light',
+        preference: 'system',
+        fallback: 'dark',
+        hid: 'nuxt-color-mode-script',
         globalName: '__NUXT_COLOR_MODE__',
+        componentName: 'ColorScheme',
+        classSuffix: '-mode',
+        storage: 'localStorage',
+        storageKey: 'sora-ql-color-mode',
     },
 
     compatibilityDate: '2025-02-07',

@@ -1,20 +1,6 @@
 <script setup lang="ts">
 const localeRoute = useLocaleRoute();
 const { t } = useI18n();
-import type { ContentNavigationItem } from '@nuxt/content';
-
-// let menuItems = [
-//     { label: t('menu.main'), to: '#main', isButton: true },
-//     { label: t('menu.overview'), to: '#overview', isButton: true },
-//     { label: t('menu.how_it_works'), to: '#how-it-works', isButton: true },
-//     { label: t('menu.about_us'), to: '#about-us', isButton: true },
-//     { label: t('menu.showcase'), to: '#showcase', isButton: true },
-//     { label: t('menu.faq'), to: '#frequently-asked-questions', isButton: true },
-// ];
-
-// watch(activeSection, (newSection) => {
-//     console.log('Active section changed to:', newSection);
-// });
 
 const links = [
     {
@@ -72,9 +58,6 @@ const links = [
                 </template>
 
                 <template #right>
-                    <!--                        <UButton @click="scrollToSection('#call-to-action')"-->
-                    <!--                            >Получить API-ключ</UButton-->
-                    <!--                        >-->
                     <UColorModeButton />
                 </template>
             </UHeader>

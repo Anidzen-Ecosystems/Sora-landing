@@ -82,9 +82,8 @@ onUnmounted(() => {
             class="absolute right-0 mt-2 mr-2"
         >
             <UButton
-                color="blue"
+                color="white"
                 icon="i-heroicons-clipboard-document-list"
-                variant="soft"
                 class="copy-button"
                 :disabled="isCopied"
                 @click="copyCode"

@@ -39,8 +39,17 @@ const items = [
 <template>
     <section id="frequently-asked-questions" class="section mb-10">
         <UContainer v-if="items.length">
-            <UPageHeader class="mb-5" :title="t('faq.title')" :description="t('faq.description')"/>
-            <ULandingFAQ  :items="items" color="primary" variant="soft" size="xl"/>
+            <UPageHeader
+                class="mb-5"
+                :title="t('faq.title')"
+                :description="t('faq.description')"
+            />
+            <ULandingFAQ
+                :items="items"
+                color="primary"
+                variant="soft"
+                size="xl"
+            />
         </UContainer>
     </section>
 </template>

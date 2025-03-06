@@ -33,10 +33,7 @@ const links = [
 <template>
     <div class="fixed w-full z-50 mt-5">
         <UContainer>
-            <UHeader
-                :links="links"
-                class="backdrop-blur-sm py-4 rounded-2xl"
-            >
+            <UHeader :links="links" class="backdrop-blur-sm py-4 rounded-2xl">
                 <template #logo>
                     <ULink :to="localeRoute('/')">
                         <div class="flex gap-2 items-center">
@@ -51,7 +48,9 @@ const links = [
                                         >QL</span
                                     >
                                 </h1>
-                                <span class="italic text-sm">v. 1.0.0 beta</span>
+                                <span class="italic text-sm"
+                                    >v. 1.0.0 beta</span
+                                >
                             </div>
                         </div>
                     </ULink>

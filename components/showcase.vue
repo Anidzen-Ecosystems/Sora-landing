@@ -21,6 +21,7 @@ const projects = [
                 class="mb-5"
                 :title="t('showcase.title')"
                 :description="t('showcase.description')"
+                :ui="{container: 'lg:justify-center', description: 'text-center'}"
             />
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

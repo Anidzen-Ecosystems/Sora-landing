@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-const items = computed(() => [
+const items = [
     {
         label: t('faq.data_source.label'),
         icon: 'i-heroicons-trophy',
@@ -33,7 +33,7 @@ const items = computed(() => [
         icon: 'i-heroicons-command-line',
         content: t('faq.tech_stack.content'),
     },
-]);
+];
 </script>
 
 <template>

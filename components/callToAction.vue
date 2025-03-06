@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-const items = computed(() => [
+const items = [
     { label: t('cta.button_text'), size: 'xl', variant: 'soft'},
     { label: t('cta.my_anime_list'), variant: 'link', color: 'gray', size: 'md', trailingIcon: 'i-heroicons-arrow-right-20-solid', to: 'https://myanimelist.net', target: '_blank' }
-]);
+];
 </script>
 
 <template>

@@ -10,7 +10,7 @@ const items = computed(() => [
 <template>
     <section id="call-to-action" class="section mb-10">
         <UContainer>
-            <ULandingCTA :title="t('cta.title')" :description="t('cta.description')" :items="items"/>
+            <ULandingCTA :title="t('cta.title')" :description="t('cta.description')" :links="items"/>
         </UContainer>
     </section>
 </template>

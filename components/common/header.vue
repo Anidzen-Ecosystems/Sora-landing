@@ -49,7 +49,7 @@ const links = [
         <UContainer>
             <UHeader
                 :links="links"
-                class="transition-all duration-300 backdrop-blur py-4 px-5 border-primary border-2 rounded-2xl overflow-hidden border-opacity-10 hover:border-opacity-50"
+                class="backdrop-blur-sm py-4 rounded-2xl"
             >
                 <template #logo>
                     <ULink :to="localeRoute('/')">

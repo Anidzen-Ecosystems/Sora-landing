@@ -10,7 +10,6 @@ const graphqlCode = GET_ANIME_QUERY;
     <section id="overview" class="section mb-10">
         <UContainer>
             <div class="flex gap-5">
-
                 <div class="w-1/2">
                     <div class="mb-5">
                         <UPageHero

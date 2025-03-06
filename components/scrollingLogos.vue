@@ -1,6 +1,6 @@
 <template>
     <div
-        class="marquee w-dvw mb-10 overflow-hidden relative grayscale opacity-50"
+        class="marquee w-dvw overflow-hidden relative grayscale opacity-50 dark:opacity-100 dark:grayscale-0"
     >
         <UiMarquee
             :items="items"

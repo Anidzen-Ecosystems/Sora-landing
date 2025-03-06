@@ -1,30 +1,28 @@
 import fs from 'fs-extra';
-import { resolve, join, dirname } from 'path';
+import { resolve, join } from 'path';
 
-const uiProDir = resolve('node_modules', '@nuxt', 'ui-pro');
+const UI_PRO_DIR = resolve('node_modules', '@nuxt', 'ui-pro');
+const LICENSE_SOURCE_PATH = resolve('nuxt-ui-pro-crack', 'modules', 'pro', 'license.ts');
+const LICENSE_DEST_PATH = join(UI_PRO_DIR, 'modules', 'pro', 'license.ts');
 
-const licenseSourceFilePath = resolve('nuxt-ui-pro-crack', 'modules', 'pro', 'license.ts');
-
-async function rewriteFiles() {
+async function rewriteLicenseFile() {
     try {
-        if (fs.existsSync(uiProDir)) {
-            console.log(licenseSourceFilePath);
-            console.log(`Found ui-pro in node_modules. Rewriting files...`);
-
-            const filePath = join(uiProDir, 'modules', 'pro', 'license.ts');
-            console.log(filePath);
-            const licenseContent = await fs.readFile(licenseSourceFilePath, 'utf-8');
-
-            // Записываем содержимое в целевой файл
-            await fs.outputFile(filePath, licenseContent);
-
-            console.log('Файл успешно перезаписан!');
-        } else {
-            console.log('ui-pro не найден в node_modules: ' + uiProDir);
+        if (!(await fs.pathExists(UI_PRO_DIR))) {
+            console.log(`ui-pro не найден в node_modules: ${UI_PRO_DIR}`);
+            return;
         }
-    } catch (err) {
-        console.error('Ошибка при перезаписи файлов:', err);
+
+        console.log(`Найден ui-pro. Перезаписываю файл лицензии...`);
+        console.log(`Исходный файл: ${LICENSE_SOURCE_PATH}`);
+        console.log(`Целевой файл: ${LICENSE_DEST_PATH}`);
+
+        const licenseContent = await fs.readFile(LICENSE_SOURCE_PATH, 'utf-8');
+        await fs.outputFile(LICENSE_DEST_PATH, licenseContent);
+
+        console.log('✅ Файл лицензии успешно перезаписан!');
+    } catch (error) {
+        console.error('❌ Ошибка при перезаписи файла лицензии:', error);
     }
 }
 
-rewriteFiles().then(r => {});
+rewriteLicenseFile().then(r => {});

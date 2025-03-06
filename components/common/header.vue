@@ -91,9 +91,10 @@ watch(activeSection, (newSection) => {
                         </template>
                     </nav>
                     <div>
-                        <UButton @click="scrollToSection('#call-to-action')"
-                            >Получить API-ключ</UButton
-                        >
+<!--                        <UButton @click="scrollToSection('#call-to-action')"-->
+<!--                            >Получить API-ключ</UButton-->
+<!--                        >-->
+                        <UColorModeButton/>
                     </div>
                 </div>
             </header>

@@ -5,6 +5,7 @@
     <PrimaryHeader />
 <!--    <overview/>-->
     <HowItWorks />
+    <Features/>
     <Showcase />
     <FrequentlyAskedQuestions />
     <CallToAction />

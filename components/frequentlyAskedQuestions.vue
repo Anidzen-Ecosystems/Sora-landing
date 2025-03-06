@@ -37,7 +37,7 @@ const items = [
 </script>
 
 <template>
-    <section id="frequently-asked-questions" class="section mb-10">
+    <section id="frequently-asked-questions" class="section py-10 sm:py-10">
         <UContainer v-if="items.length">
             <UPageHeader
                 class="mb-5"

@@ -22,13 +22,14 @@ const items = [
 ];
 </script>
 <template>
-    <section id="overview" class="section mb-10">
+    <section id="overview" class="section">
         <UContainer>
             <ULandingSection
                 :title="t('overview.title')"
                 :description="t('overview.description')"
                 :links="items"
                 align="left"
+                :ui="{wrapper: 'py-10 sm:py-10'}"
             >
                 <CodeBlock
                     :code="graphqlCode"

@@ -15,7 +15,7 @@ const projects = [
 </script>
 
 <template>
-    <section id="showcase" class="section">
+    <section id="showcase" class="section py-10 sm:py-10">
         <UContainer>
             <UPageHeader
                 class="mb-5"

@@ -4,6 +4,7 @@
     <PrimaryHeader />
     <ScrollingLogos />
     <Overview />
+    <UColorModeSelect class="w-28" />
     <HowItWorks/>
     <AboutUs/>
     <Showcase/>

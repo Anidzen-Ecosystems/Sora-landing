@@ -39,8 +39,21 @@ const items = computed(() => [
 <template>
     <section id="frequently-asked-questions" class="section mb-10">
         <UContainer v-if="items.length">
-            <UPageHeader class="mb-5" :title="t('faq.title')" :description="t('faq.description')"/>
-            <ULandingFAQ  :items="items" color="primary" variant="soft" size="xl"/>
+            <div class="mb-5">
+                <h3 class="text-4xl font-semibold text-primary">
+                    {{ t('faq.title') }}
+                </h3>
+                <p>
+                    {{ t('faq.description') }}
+                </p>
+            </div>
+            <UAccordion color="primary" variant="soft" size="xl" :items="items">
+                <template #item="{ item }">
+                    <p class="text-black dark:text-white text-base">
+                        {{ item.content }}
+                    </p>
+                </template>
+            </UAccordion>
         </UContainer>
     </section>
 </template>

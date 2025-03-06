@@ -9,5 +9,5 @@
 <!--    <Showcase />-->
     <!--    <p>Features</p>-->
     <FrequentlyAskedQuestions />
-<!--    <CallToAction />-->
+   <CallToAction />
 </template>

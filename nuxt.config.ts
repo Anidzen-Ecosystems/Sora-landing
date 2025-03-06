@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        baseURL: process.env.NUXT_APP_BASE_URL || "/",
+        baseURL: process.env.NUXT_APP_BASE_URL || '/',
     },
 
     devtools: { enabled: true },
+
+    extends: ['@nuxt/ui-pro'],
 
     modules: [
         '@nuxt/ui',
@@ -32,9 +34,14 @@ export default defineNuxtConfig({
     },
 
     colorMode: {
-        preference: 'light',
-        fallback: 'light',
+        preference: 'system',
+        fallback: 'dark',
+        hid: 'nuxt-color-mode-script',
         globalName: '__NUXT_COLOR_MODE__',
+        componentName: 'ColorScheme',
+        classSuffix: '-mode',
+        storage: 'localStorage',
+        storageKey: 'sora-ql-color-mode',
     },
 
     compatibilityDate: '2025-02-07',

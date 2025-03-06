@@ -1,38 +1,42 @@
 {
-  "name": "w33bv.gl-portfolio",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "format": "prettier --write '**/*.{js,md,ts,vue}'"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.9.0",
-    "@nuxt/ui": "^2.21.0",
-    "@nuxtjs/i18n": "^9.2.0",
-    "@pinia/nuxt": "^0.9.0",
-    "@types/prismjs": "^1.26.5",
-    "nuxt": "^3.15.4",
-    "nuxt-time": "^1.0.3",
-    "pinia": "^2.3.1",
-    "prettier": "^3.4.2",
-    "vue": "latest",
-    "zod": "^3.23.8"
-  },
-  "overrides": {
-    "vue": "latest"
-  },
-  "dependencies": {
-    "chart.js": "^3.9.1",
-    "clipboard": "^2.0.11",
-    "mermaid": "^11.4.1",
-    "nuxt-highcharts": "^3.1.1",
-    "prismjs": "^1.29.0",
-    "vue-chart-3": "^3.1.8"
-  }
+    "name": "w33bv.gl-portfolio",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "format": "prettier --write .",
+        "nuxt-rewrite": "node nuxt-ui-pro-crack/rewriteFiles.js"
+    },
+    "devDependencies": {
+        "@nuxt/devtools": "latest",
+        "@nuxt/image": "^1.9.0",
+        "@nuxt/ui": "^2.21.0",
+        "@nuxtjs/i18n": "^9.2.0",
+        "@pinia/nuxt": "^0.9.0",
+        "@types/prismjs": "^1.26.5",
+        "nuxt": "^3.15.4",
+        "nuxt-time": "^1.0.3",
+        "pinia": "^2.3.1",
+        "prettier": "^3.4.2",
+        "vue": "latest",
+        "zod": "^3.23.8"
+    },
+    "overrides": {
+        "vue": "latest"
+    },
+    "dependencies": {
+        "@nuxt/content": "^3.3.0",
+        "@nuxt/ui-pro": "^1.7.0",
+        "chart.js": "^3.9.1",
+        "clipboard": "^2.0.11",
+        "mermaid": "^11.4.1",
+        "nuxt-highcharts": "^3.1.1",
+        "nuxt-ui-pro-crack": "file:nuxt-ui-pro-crack",
+        "prismjs": "^1.29.0",
+        "vue-chart-3": "^3.1.8"
+    }
 }

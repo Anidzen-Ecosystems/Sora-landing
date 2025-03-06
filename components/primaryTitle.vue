@@ -3,12 +3,14 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <div class="z-10 h-dvh w-dvw flex flex-col items-center justify-center absolute">
+    <div
+        class="z-10 h-dvh w-dvw flex flex-col items-center justify-center absolute"
+    >
         <h1 class="text-6xl max-w-4xl text-center font-bold text-primary">
             {{ t('primary_title.title') }}
         </h1>
         <h2 class="text-3xl max-w-6xl text-center">
-            {{ t('primary_title.subtitle') }}
+            {{ t('primary_title.description') }}
         </h2>
         <h6 class="text-center mt-2 text-gray-700">
             {{ t('primary_title.footer.top') }}

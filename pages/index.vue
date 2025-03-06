@@ -3,12 +3,12 @@
 <template>
     <PrimaryHeader />
     <ScrollingLogos />
+
     <Overview />
-    <HowItWorks/>
-    <AboutUs/>
-    <Showcase/>
+    <HowItWorks />
+    <!--    <AboutUs />-->
+    <Showcase />
     <!--    <p>Features</p>-->
     <FrequentlyAskedQuestions />
-    <!--    <p>Contact</p>-->
     <CallToAction />
 </template>

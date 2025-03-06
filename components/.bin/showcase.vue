@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import CodeBlock from '~/components/ui/codeBlock.vue';
-
 const { t } = useI18n();
 
 const projects = [
@@ -15,19 +13,16 @@ const projects = [
 </script>
 
 <template>
-    <section id="showcase" class="section py-10 sm:py-10">
+    <section id="showcase" class="bg-gray-50 py-16 mb-10 section">
         <UContainer>
-            <UPageHeader
-                class="mb-5"
-                :title="t('showcase.title')"
-                :description="t('showcase.description')"
-                :ui="{
-                    container: 'lg:justify-center',
-                    description: 'text-center',
-                }"
-            />
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-semibold text-primary">
+                    {{ t('showcase.title') }}
+                </h3>
+                <p class="text-lg">{{ t('showcase.subtitle') }}</p>
+            </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <UCard
                     v-for="project in projects"
                     :key="project.nameKey"
@@ -39,7 +34,7 @@ const projects = [
                             <NuxtImg
                                 :src="project.image"
                                 alt="Project Image"
-                                class="w-full min-h-64 object-cover hover:scale-105 hover:blur-0 transition-all blur-sm"
+                                class="w-full min-h-64 object-cover blur-sm hover:scale-105 hover:blur-0 transition-all"
                             />
                         </div>
                     </ULink>

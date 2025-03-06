@@ -56,7 +56,7 @@ onMounted(() => {
                 <div
                     v-for="(cell, colIndex) in row"
                     :key="colIndex"
-                    class="cell border-[0.1px] border-primary border-opacity-[0.05]"
+                    class="cell border-[0.1px] border-primary border-opacity-10"
                     :class="{
                         filled:
                             cell === 1 ||

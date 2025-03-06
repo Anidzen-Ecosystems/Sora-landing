@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-const items = [
+const items = computed(() => [
     {
         label: t('faq.data_source.label'),
         icon: 'i-heroicons-trophy',
@@ -33,23 +33,27 @@ const items = [
         icon: 'i-heroicons-command-line',
         content: t('faq.tech_stack.content'),
     },
-];
+]);
 </script>
 
 <template>
-    <section id="frequently-asked-questions" class="section py-10 sm:py-10">
+    <section id="frequently-asked-questions" class="section mb-10">
         <UContainer v-if="items.length">
-            <UPageHeader
-                class="mb-5"
-                :title="t('faq.title')"
-                :description="t('faq.description')"
-            />
-            <ULandingFAQ
-                :items="items"
-                color="primary"
-                variant="soft"
-                size="xl"
-            />
+            <div class="mb-5">
+                <h3 class="text-4xl font-semibold text-primary">
+                    {{ t('faq.title') }}
+                </h3>
+                <p>
+                    {{ t('faq.description') }}
+                </p>
+            </div>
+            <UAccordion color="primary" variant="soft" size="xl" :items="items">
+                <template #item="{ item }">
+                    <p class="text-black dark:text-white text-base">
+                        {{ item.content }}
+                    </p>
+                </template>
+            </UAccordion>
         </UContainer>
     </section>
 </template>

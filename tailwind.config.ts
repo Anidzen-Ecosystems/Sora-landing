@@ -6,8 +6,13 @@ export default <Partial<Config>>{
         extend: {
             keyframes: {
                 float: {
-                    '0%, 100%': { transform: 'translateY(var(--float-distance, 0px))' },
-                    '50%': { transform: 'translateY(calc(var(--float-distance, 0px) * -1))' },
+                    '0%, 100%': {
+                        transform: 'translateY(var(--float-distance, 0px))',
+                    },
+                    '50%': {
+                        transform:
+                            'translateY(calc(var(--float-distance, 0px) * -1))',
+                    },
                 },
             },
             animation: {

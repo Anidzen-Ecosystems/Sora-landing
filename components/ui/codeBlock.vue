@@ -9,7 +9,14 @@ const toast = useToast();
 
 const props = defineProps<{
     code: string;
-    language?: 'php' | 'javascript' | 'typescript' | 'graphql' | 'html' | 'css' | 'json';
+    language?:
+        | 'php'
+        | 'javascript'
+        | 'typescript'
+        | 'graphql'
+        | 'html'
+        | 'css'
+        | 'json';
     showMacHeader?: boolean;
     showCopyButton?: boolean;
     backgroundColor?: string;
@@ -69,7 +76,11 @@ onUnmounted(() => {
             <span class="mac-window-dot yellow"></span>
             <span class="mac-window-dot green"></span>
         </div>
-        <UTooltip v-if="showCopyButton" :text="isCopied ? t('common.copied') : t('common.copy')" class="absolute right-0 mt-2 mr-2">
+        <UTooltip
+            v-if="showCopyButton"
+            :text="isCopied ? t('common.copied') : t('common.copy')"
+            class="absolute right-0 mt-2 mr-2"
+        >
             <UButton
                 color="blue"
                 icon="i-heroicons-clipboard-document-list"
@@ -80,7 +91,11 @@ onUnmounted(() => {
                 :aria-label="isCopied ? t('common.copied') : t('common.copy')"
             />
         </UTooltip>
-        <pre class="py-4" :class="`language-${props.language}`"  :style="{ backgroundColor: props.backgroundColor || '#212a3b' }">
+        <pre
+            class="py-4"
+            :class="`language-${props.language}`"
+            :style="{ backgroundColor: props.backgroundColor || '#212a3b' }"
+        >
              <code v-text="props.code" v-if="!highlightedCode"></code>
              <code v-html="highlightedCode" v-else></code>
         </pre>
@@ -109,9 +124,15 @@ onUnmounted(() => {
     margin-right: 0.5rem;
 }
 
-.red { background-color: #ff5f56; }
-.yellow { background-color: #ffbd2e; }
-.green { background-color: #27c93f; }
+.red {
+    background-color: #ff5f56;
+}
+.yellow {
+    background-color: #ffbd2e;
+}
+.green {
+    background-color: #27c93f;
+}
 
 pre {
     color: #a9b7c6;

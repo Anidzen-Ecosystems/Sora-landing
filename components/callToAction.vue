@@ -3,10 +3,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section
-        id="call-to-action"
-        class="bg-primary text-white py-16 section"
-    >
+    <section id="call-to-action" class="bg-primary text-white py-16 section">
         <UContainer>
             <div class="text-center mb-5">
                 <h2 class="text-4xl font-semibold mb-2">

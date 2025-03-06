@@ -2,7 +2,12 @@ import fs from 'fs-extra';
 import { resolve, join } from 'path';
 
 const UI_PRO_DIR = resolve('node_modules', '@nuxt', 'ui-pro');
-const LICENSE_SOURCE_PATH = resolve('nuxt-ui-pro-crack', 'modules', 'pro', 'license.ts');
+const LICENSE_SOURCE_PATH = resolve(
+    'nuxt-ui-pro-crack',
+    'modules',
+    'pro',
+    'license.ts',
+);
 const LICENSE_DEST_PATH = join(UI_PRO_DIR, 'modules', 'pro', 'license.ts');
 
 async function rewriteLicenseFile() {
@@ -25,4 +30,4 @@ async function rewriteLicenseFile() {
     }
 }
 
-rewriteLicenseFile().then(r => {});
+rewriteLicenseFile().then((r) => {});

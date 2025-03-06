@@ -1,5 +1,9 @@
 <template>
-    <div class="marquee" :class="`marquee--${itemsCount}`" :style="marqueeStyle">
+    <div
+        class="marquee"
+        :class="`marquee--${itemsCount}`"
+        :style="marqueeStyle"
+    >
         <NuxtImg
             v-for="(item, index) in items"
             :key="index"
@@ -20,7 +24,7 @@ export default {
             type: Array,
             required: true,
             validator(value) {
-                return value.every(item => item.src && item.alt);
+                return value.every((item) => item.src && item.alt);
             },
         },
         itemsCount: {
@@ -53,8 +57,9 @@ export default {
                 '--marquee-duration': `${this.duration}s`,
                 ...(this.maskSides
                     ? {
-                        maskImage: 'linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0))',
-                    }
+                          maskImage:
+                              'linear-gradient(to right, hsl(0 0% 0% / 0), hsl(0 0% 0% / 1) 20%, hsl(0 0% 0% / 1) 80%, hsl(0 0% 0% / 0))',
+                      }
                     : {}),
             };
         },
@@ -82,12 +87,16 @@ export default {
         calc(var(--marquee-item-width) * var(--marquee-items)),
         calc(100% + var(--marquee-item-width))
     );
-    --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
+    --marquee-delay: calc(
+        var(--marquee-duration) / var(--marquee-items) *
+            (var(--marquee-items) - var(--marquee-item-index)) * -1
+    );
 
     position: absolute;
     inset-inline-start: var(--marquee-item-offset);
     transform: translateX(-50%);
-    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
+    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s)
+        infinite;
 }
 
 @keyframes go {

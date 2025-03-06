@@ -2,8 +2,7 @@
 const { t } = useI18n();
 const { scrollToSection } = useScrollToSection();
 
-import
- { GET_ANIME_QUERY } from '~/graphql/getAnimeQueryOne';
+import { GET_ANIME_QUERY } from '~/graphql/getAnimeQueryOne';
 
 const graphqlCode = GET_ANIME_QUERY;
 </script>
@@ -20,7 +19,7 @@ const graphqlCode = GET_ANIME_QUERY;
                             {{ t('overview.description') }}
                         </p>
                         <p class="mt-4">
-                            {{ t ('overview.no-commerce')}}
+                            {{ t('overview.no-commerce') }}
                         </p>
                         <div class="mt-4 flex gap-3">
                             <UButton

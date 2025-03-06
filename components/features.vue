@@ -6,6 +6,15 @@ const  { t } = useI18n();
 <template>
     <section class="py-10 sm:py-10">
         <UContainer>
+            <UPageHeader
+                class="mb-5"
+                :title="t('features.title')"
+                :description="t('features.description')"
+                :ui="{
+                    container: 'lg:justify-center',
+                    description: 'text-center',
+                }"
+            />
             <ULandingGrid>
                 <ULandingCard
                     class="col-span-6 row-span-2"

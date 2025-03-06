@@ -29,7 +29,7 @@ const items = [
                 :description="t('overview.description')"
                 :links="items"
                 align="left"
-                :ui="{wrapper: 'py-10 sm:py-10'}"
+                :ui="{ wrapper: 'py-10 sm:py-10' }"
             >
                 <CodeBlock
                     :code="graphqlCode"

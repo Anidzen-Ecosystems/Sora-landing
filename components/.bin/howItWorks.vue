@@ -8,11 +8,11 @@ onMounted(() => {
 
 const features = [
     {
-        name: "",
-        description: "",
-        icon: ""
-    }
-]
+        name: '',
+        description: '',
+        icon: '',
+    },
+];
 </script>
 
 <template>

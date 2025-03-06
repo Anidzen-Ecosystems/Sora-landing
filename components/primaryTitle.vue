@@ -10,7 +10,7 @@ const { t } = useI18n();
             {{ t('primary_title.title') }}
         </h1>
         <h2 class="text-3xl max-w-6xl text-center">
-            {{ t('primary_title.subtitle') }}
+            {{ t('primary_title.description') }}
         </h2>
         <h6 class="text-center mt-2 text-gray-700">
             {{ t('primary_title.footer.top') }}

@@ -12,15 +12,31 @@
 </template>
 
 <style scoped>
-.gradient-overlay {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 1) 25%,
-        rgba(255, 255, 255, 0) 100%
-    );
+.light {
+    .gradient-overlay {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 25%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+}
+
+.dark {
+    .gradient-overlay {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        background: linear-gradient(
+            to bottom,
+            rgb(23, 23, 23) 25%,
+            rgba(23, 23, 23, 0) 100%
+        );
+    }
 }
 </style>

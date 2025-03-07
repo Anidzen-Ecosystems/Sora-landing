@@ -91,7 +91,7 @@ onBeforeUnmount(() => {
                                     class="text-primary"
                                 >QL</span>
                                 </h1>
-                                <span class="italic text-sm">v. 1.0.0 beta</span>
+                                <span class="italic text-sm transition-all" :class="{'scrolled-name-span': scrollPosition > 150}">v. 1.0.0 beta</span>
                             </div>
                         </div>
                     </ULink>
@@ -107,7 +107,7 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .scrolled-header {
-    margin-top: 0;
+    @apply mt-0;
 }
 
 .u-header {
@@ -118,5 +118,9 @@ onBeforeUnmount(() => {
 
 .scrolled-logo {
     @apply w-10 h-10;
+}
+
+.scrolled-name-span {
+    @apply hidden;
 }
 </style>

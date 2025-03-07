@@ -32,8 +32,8 @@ useHead({
         { property: 'og:title', content: t('meta.index.title') },
         { property: 'og:description', content: t('meta.index.description') },
         { property: 'og:locale', content: locale.value },
-        { property: 'og:url', content: 'https://anidzen-ecosystems.github.io/Sora-landing/' + locale.value},
-        { property: 'og:image', content: 'https://anidzen-ecosystems.github.io/Sora-landing' + '/images/og-images/og-image-' + locale.value + '.png'},
+        { property: 'og:url', content: 'https://sora-beta.anidzen.com' + '/' +  locale.value},
+        { property: 'og:image', content: 'https://sora-beta.anidzen.com' + '/images/og-images/og-image-' + locale.value + '.png'},
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
     ],
@@ -59,22 +59,5 @@ useHead({
 <style>
 body {
     overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    @apply w-2;
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(var(--color-primary-400));
-    cursor: pointer;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(var(--color-primary-500));
 }
 </style>

@@ -82,7 +82,8 @@ onBeforeUnmount(() => {
                         <div class="flex gap-2 items-center">
                             <NuxtImg
                                 src="/icons/sora.svg"
-                                class="w-12 pointer-events-none select-none"
+                                class="transition-all w-12 h-12 pointer-events-none select-none"
+                                :class="{'scrolled-logo': scrollPosition > 150}"
                             />
                             <div class="flex justify-center flex-col">
                                 <h1 class="text-2xl font-bold uppercase">
@@ -113,5 +114,9 @@ onBeforeUnmount(() => {
     border-radius: 0 0 1rem 1rem;
     border-bottom-width: 2px !important;
     @apply py-2;
+}
+
+.scrolled-logo {
+    @apply w-10 h-10;
 }
 </style>

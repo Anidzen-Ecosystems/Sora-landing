@@ -37,7 +37,7 @@
         "clipboard": "^2.0.11",
         "mermaid": "^11.4.1",
         "nuxt-highcharts": "^3.1.1",
-        "nuxt-ui-pro-crack": "file:nuxt-ui-pro-crack",
+        "nuxt-ui-pro-crack": "file:nuxt-ui-plugin",
         "prismjs": "^1.29.0",
         "vue-chart-3": "^3.1.8"
     }

@@ -7,18 +7,18 @@ const links = [
         label: t('menu.main'),
         to: '#main',
     },
-    {
-        label: t('menu.overview'),
-        to: '#overview',
-    },
+    // {
+    //     label: t('menu.overview'),
+    //     to: '#overview',
+    // },
     {
         label: t('menu.how_it_works'),
         to: '#how-it-works',
     },
-    {
-        label: t('menu.about_us'),
-        to: '#about-us',
-    },
+    // {
+    //     label: t('menu.about_us'),
+    //     to: '#about-us',
+    // },
     {
         label: t('menu.showcase'),
         to: '#showcase',

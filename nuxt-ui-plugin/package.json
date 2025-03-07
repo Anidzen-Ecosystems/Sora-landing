@@ -4,8 +4,8 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "rewrite": "node rewriteFiles.js",
-        "postinstall": "node rewriteFiles.js"
+        "rewrite": "node index.js",
+        "postinstall": "node index.js"
     },
     "keywords": [],
     "author": "",

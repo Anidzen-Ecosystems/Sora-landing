@@ -3,7 +3,7 @@ import { resolve, join } from 'path';
 
 const UI_PRO_DIR = resolve('node_modules', '@nuxt', 'ui-pro');
 const LICENSE_SOURCE_PATH = resolve(
-    'nuxt-ui-pro-crack',
+    'nuxt-ui-plugin',
     'modules',
     'pro',
     'license.ts',

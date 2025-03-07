@@ -1,5 +1,5 @@
 {
-    "name": "w33bv.gl-portfolio",
+    "name": "sora.ql",
     "private": true,
     "type": "module",
     "scripts": {
@@ -9,9 +9,9 @@
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "format": "prettier --write .",
-        "github-generate": "npx nuxt build --preset github_pages",
-        "github-pages": "npx gh-pages --dotfiles -d .output/public",
-        "nuxt-rewrite": "node nuxt-ui-pro-crack/rewriteFiles.js"
+        "gh-generate": "npx nuxt build --preset github_pages",
+        "gh-pages": "npx gh-pages --dotfiles -d .output/public",
+        "nuxt-rewrite": "node nuxt-ui-plugin/index.js"
     },
     "devDependencies": {
         "@nuxt/devtools": "latest",

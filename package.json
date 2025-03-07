@@ -9,6 +9,7 @@
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "format": "prettier --write .",
+        "github-pages": "npx gh-pages --dotfiles -d .output/public",
         "nuxt-rewrite": "node nuxt-ui-pro-crack/rewriteFiles.js"
     },
     "devDependencies": {

@@ -4,7 +4,7 @@ const  { t } = useI18n();
 </script>
 
 <template>
-    <section class="py-10 sm:py-10">
+    <section id="features" class="section py-10 sm:py-10">
         <UContainer>
             <UPageHeader
                 class="mb-5"

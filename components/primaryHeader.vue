@@ -1,13 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
-    <section id="main" class="section w-dvh h-dvh overflow-hidden">
+    <section id="main" class="section w-dvh md:h-dvh overflow-hidden">
         <div class="relative">
-            <PrimaryTitle />
             <UiFallingBlocks />
+            <PrimaryTitle />
         </div>
         <div class="gradient-overlay top-0"></div>
-        <div class="gradient-overlay bottom-0 rotate-180"></div>
+        <div class="gradient-overlay bottom-0 rotate-180 hidden"></div>
     </section>
 </template>
 

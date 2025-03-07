@@ -1,11 +1,10 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <PrimaryHeader />
-<!--    <overview/>-->
+    <!--    <overview/>-->
     <HowItWorks />
-    <Features/>
+    <Features />
     <Showcase />
     <FrequentlyAskedQuestions />
     <CallToAction />

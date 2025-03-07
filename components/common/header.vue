@@ -44,9 +44,9 @@ const handleScroll = () => {
 };
 
 const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            links.value = links.value.map(link => {
+            links.value = links.value.map((link) => {
                 if (link.id === entry.target.id) {
                     return { ...link, active: true };
                 }
@@ -59,10 +59,12 @@ const handleIntersection = (entries: IntersectionObserverEntry[]) => {
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
 
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 0.5,
+    });
 
     const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
+    sections.forEach((section) => {
         observer.observe(section);
     });
 });
@@ -74,24 +76,42 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div :class="{'scrolled-header': scrollPosition > 150}" class="transition-all fixed w-full z-50 mt-5">
+    <div
+        :class="{ 'scrolled-header': scrollPosition > 150 }"
+        class="transition-all fixed w-full z-50 mt-5"
+    >
         <UContainer>
-            <UHeader :links="links" class="backdrop-blur-sm py-4 rounded-2xl" :ui="{wrapper: ''}" :class="{'u-header': scrollPosition > 150}">
+            <UHeader
+                :links="links"
+                class="backdrop-blur-sm py-4 rounded-2xl"
+                :ui="{ wrapper: '' }"
+                :class="{ 'u-header': scrollPosition > 150 }"
+            >
                 <template #logo>
                     <ULink :to="localeRoute('/')">
                         <div class="flex gap-2 items-center">
                             <NuxtImg
                                 src="/icons/sora.svg"
                                 class="transition-all w-12 h-12 pointer-events-none select-none"
-                                :class="{'scrolled-logo': scrollPosition > 150}"
+                                :class="{
+                                    'scrolled-logo': scrollPosition > 150,
+                                }"
                             />
                             <div class="flex justify-center flex-col">
                                 <h1 class="text-2xl font-bold uppercase">
                                     {{ t('site_name') }}.<span
-                                    class="text-primary"
-                                >QL</span>
+                                        class="text-primary"
+                                        >QL</span
+                                    >
                                 </h1>
-                                <span class="italic text-sm transition-all" :class="{'scrolled-name-span': scrollPosition > 150}">v. 1.0.0 beta</span>
+                                <span
+                                    class="italic text-sm transition-all"
+                                    :class="{
+                                        'scrolled-name-span':
+                                            scrollPosition > 150,
+                                    }"
+                                    >v. 1.0.0 beta</span
+                                >
                             </div>
                         </div>
                     </ULink>

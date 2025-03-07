@@ -3,7 +3,6 @@ const { t } = useI18n();
 </script>
 
 <template>
-
     <div
         class="z-10 h-dvh w-dvw flex flex-col items-center justify-center absolute"
     >
@@ -12,9 +11,7 @@ const { t } = useI18n();
             :description="t('primary_title.description')"
             align="left"
         >
-            <div>
-                wdwd
-            </div>
+            <div>wdwd</div>
         </ULandingSection>
         <h1 class="text-6xl max-w-4xl text-center font-bold text-primary">
             {{ t('primary_title.title') }}

@@ -88,7 +88,7 @@ onBeforeUnmount(() => {
                 :class="{ 'u-header': scrollPosition > 150 }"
             >
                 <template #logo>
-                    <ULink :to="localeRoute('/')">
+                    <div @click="localeRoute('/')">
                         <div class="flex gap-2 items-center">
                             <NuxtImg
                                 src="/icons/sora.svg"
@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
                                 >
                             </div>
                         </div>
-                    </ULink>
+                    </div>
                 </template>
 
                 <template #right>

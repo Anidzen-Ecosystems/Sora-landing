@@ -32,7 +32,7 @@ useHead({
         { property: 'og:title', content: t('meta.index.title') },
         { property: 'og:description', content: t('meta.index.description') },
         { property: 'og:locale', content: locale.value },
-        { property: 'og:image', content: '/images/og-images/og-image-' + locale.value + '.png'},
+        { property: 'og:image', content: 'https://anidzen-ecosystems.github.io/Sora-landing' + '/images/og-images/og-image-' + locale.value + '.png'},
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
     ],

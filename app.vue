@@ -27,19 +27,48 @@ useHead({
             content: commonKeywords + ' ' + currentKeywords.value,
         },
         { name: 'robots', content: 'index, follow' },
-        { name: 'description', content: t('meta.index.description')},
-        { name: 'canonical', content: 'https://sora-beta.anidzen.com/' + locale.value },
-        { property: 'image', content: 'https://sora-beta.anidzen.com' + '/images/og-images/og-image-' + locale.value + '.png'},
+        { name: 'description', content: t('meta.index.description') },
+        {
+            name: 'canonical',
+            content: 'https://sora-beta.anidzen.com/' + locale.value,
+        },
+        {
+            property: 'image',
+            content:
+                'https://sora-beta.anidzen.com' +
+                '/images/og-images/og-image-' +
+                locale.value +
+                '.png',
+        },
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:title', content: t('meta.index.title') },
-        { property: 'twitter:description', content: t('meta.index.description') },
-        { property: 'twitter:image', content: 'https://sora-beta.anidzen.com/images/og-images/og-image-' + locale.value + '.png' },
+        {
+            property: 'twitter:description',
+            content: t('meta.index.description'),
+        },
+        {
+            property: 'twitter:image',
+            content:
+                'https://sora-beta.anidzen.com/images/og-images/og-image-' +
+                locale.value +
+                '.png',
+        },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: t('meta.index.title') },
         { property: 'og:description', content: t('meta.index.description') },
         { property: 'og:locale', content: locale.value },
-        { property: 'og:url', content: 'https://sora-beta.anidzen.com' + '/' +  locale.value},
-        { property: 'og:image', content: 'https://sora-beta.anidzen.com' + '/images/og-images/og-image-' + locale.value + '.png'},
+        {
+            property: 'og:url',
+            content: 'https://sora-beta.anidzen.com' + '/' + locale.value,
+        },
+        {
+            property: 'og:image',
+            content:
+                'https://sora-beta.anidzen.com' +
+                '/images/og-images/og-image-' +
+                locale.value +
+                '.png',
+        },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
     ],

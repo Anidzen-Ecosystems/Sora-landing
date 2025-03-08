@@ -33,7 +33,9 @@ const features = [
 </script>
 
 <template>
-    <section class="z-20 lg:h-dvh pt-10 md:pt-0 w-dvw flex flex-col items-center justify-center">
+    <section
+        class="z-20 lg:h-dvh pt-10 md:pt-0 w-dvw flex flex-col items-center justify-center"
+    >
         <ULandingSection
             :title="t('primary_title.title')"
             :description="t('primary_title.description')"
@@ -41,15 +43,13 @@ const features = [
             :features="features"
             align="left"
         >
-
-                <UiCodeBlock
-                    :code="graphqlCode"
-                    language="graphql"
-                    background-color="#212121"
-                    show-mac-header
-                    show-copy-button
-                />
-
+            <UiCodeBlock
+                :code="graphqlCode"
+                language="graphql"
+                background-color="#212121"
+                show-mac-header
+                show-copy-button
+            />
         </ULandingSection>
     </section>
 </template>

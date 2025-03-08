@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <section id="main" class="section w-dvh md:h-dvh overflow-hidden">

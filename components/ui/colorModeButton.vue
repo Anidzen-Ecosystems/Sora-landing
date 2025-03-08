@@ -37,5 +37,4 @@ const switchTheme = () => {
             icon="i-heroicons-computer-desktop"
         ></UButton>
     </div>
-
 </template>

@@ -73,7 +73,6 @@ onBeforeUnmount(() => {
     observer.disconnect();
     window.removeEventListener('scroll', handleScroll);
 });
-
 </script>
 
 <template>
@@ -119,9 +118,9 @@ onBeforeUnmount(() => {
                 </template>
 
                 <template #right>
-<!--                    <UColorModeButton />-->
-                    <UiLanguageSelect/>
-                    <UiColorModeButton/>
+                    <!--                    <UColorModeButton />-->
+                    <UiLanguageSelect />
+                    <UiColorModeButton />
                 </template>
             </UHeader>
         </UContainer>

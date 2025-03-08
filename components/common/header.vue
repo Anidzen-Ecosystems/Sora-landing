@@ -4,7 +4,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 const localeRoute = useLocaleRoute();
 const { t } = useI18n();
 
-const links = ref([
+const links = computed(() => [
     {
         label: t('menu.main'),
         to: '#main',

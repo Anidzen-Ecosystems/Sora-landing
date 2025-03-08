@@ -49,7 +49,7 @@ onMounted(() => {
                     D[⚡ Redis]; D -->|✅
                     {{ t('how_it_works.graphql.cache_found') }}| B; D -->|❌
                     {{ t('how_it_works.graphql.cache_miss') }}| E[🔍
-                    Sora-парсер]; E -->|🛑
+                    Sora-Parser]; E -->|🛑
                     {{ t('how_it_works.graphql.cache_check') }}| D; D -->|✅
                     {{ t('how_it_works.graphql.cache_found') }}| E; E -->|💾
                     {{ t('how_it_works.graphql.database_check') }}| H[🗄️ MySQL /

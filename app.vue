@@ -90,9 +90,3 @@ useHead({
     <UModals />
     <UNotifications />
 </template>
-
-<style>
-body {
-    overflow-x: hidden;
-}
-</style>

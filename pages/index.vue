@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+
+useHead({
+    title: t('meta.index.title'),
+});
+</script>
 
 <template>
     <PrimaryHeader />

@@ -9,7 +9,7 @@
     "meta": {
         "index": {
             "title": "Sora.QL — Simple and Fast GraphQL API for Anime",
-            "description": "Free and powerful GraphQL API for anime with easy integration, multi-language support, and high performance."
+            "description": "Free and powerful GraphQL API for anime with multi-language support and high performance."
         }
     },
     "menu": {
@@ -18,20 +18,20 @@
         "about_us": "About Us",
         "how_it_works": "How It Works",
         "features": "Features",
-        "showcase": "Projects",
+        "showcase": "Showcase",
         "faq": "FAQ"
     },
     "primary_title": {
         "title": "Sora.QL - Simple and Fast GraphQL API for Anime",
-        "description": "All information about anime, characters, and episodes in one convenient API. Easy integration, powerful capabilities, and multi-language support — Sora.QL opens access to data without limits!",
+        "description": "All information about anime, characters, and episodes in one convenient API. Easy integration, powerful features, and multi-language support — Sora.QL provides unlimited access to data!",
         "features": {
             "feature_1": {
                 "name": "GraphQL Flexibility",
                 "description": "Get only the data you need, minimizing load and optimizing API performance."
             },
             "feature_2": {
-                "name": "MyAnimeList.com",
-                "description": "All anime data from MyAnimeList.com — the best anime source in the world!"
+                "name": "MyAnimeList.net",
+                "description": "All anime data from MyAnimeList.com — the best source for anime in the world!"
             }
         },
         "docsButton": "Documentation",
@@ -85,7 +85,7 @@
             "description": "All anime data from MyAnimeList.com — the unparalleled and greatest anime resource in the world! 🌍🔥 It's not just a social network, but a true treasure trove for anime fans, bringing millions of users together worldwide. 💎 It has the most accurate ratings, detailed descriptions, extensive lists of characters and episodes, up-to-date reviews, and a lively community that makes the world of anime even brighter! 🌟"
         },
         "feature_3": {
-            "name": "Multi-Language Localization \uD83C\uDF0D",
+            "name": "Multi-Language Localization ",
             "description": "We use machine translation to automatically adapt content to the target language, making anime accessible to viewers worldwide. 🌎 Now favorite titles, characters, and episodes are understandable in different languages without hassle. 🗣️ This simplifies the integration of the API into international projects and helps fans enjoy anime in their native language. 📖"
         },
         "feature_4": {

@@ -1,146 +1,146 @@
 {
     "site_name": "Sora",
     "common": {
-        "copy": "Копировать",
-        "copy_failed": "не удалось копировать",
-        "paste": "Вставить",
-        "copied": "Скопировано"
+        "copy": "Copy",
+        "copy_failed": "Failed to copy",
+        "paste": "Paste",
+        "copied": "Copied"
     },
     "meta": {
         "index": {
-            "title": "Sora.QL — Простой и быстрый GraphQL API для аниме",
-            "description": "Бесплатный и мощный GraphQL API для аниме с простой интеграцией, поддержкой нескольких языков и высокой производительностью."
+            "title": "Sora.QL — Simple and Fast GraphQL API for Anime",
+            "description": "Free and powerful GraphQL API for anime with easy integration, multi-language support, and high performance."
         }
     },
     "menu": {
-        "main": "Главная",
-        "overview": "обзор",
-        "about_us": "О нас",
-        "how_it_works": "Как это работает",
-        "features": "Преимущества",
-        "showcase": "Проекты",
+        "main": "Home",
+        "overview": "Overview",
+        "about_us": "About Us",
+        "how_it_works": "How It Works",
+        "features": "Features",
+        "showcase": "Projects",
         "faq": "FAQ"
     },
     "primary_title": {
-        "title": "Sora.QL - Простой и быстрый GraphQL API для аниме",
-        "description": "Вся информация об аниме, персонажах и эпизодах в одном удобном API. Простая интеграция, мощные возможности и поддержка нескольких языков — Sora.QL открывает доступ к данным без границ!",
+        "title": "Sora.QL - Simple and Fast GraphQL API for Anime",
+        "description": "All information about anime, characters, and episodes in one convenient API. Easy integration, powerful capabilities, and multi-language support — Sora.QL opens access to data without limits!",
         "features": {
             "feature_1": {
-                "name": "Гибкость GraphQL",
-                "description": "Получай только нужные данные, минимизируя нагрузку и оптимизируя работу API."
+                "name": "GraphQL Flexibility",
+                "description": "Get only the data you need, minimizing load and optimizing API performance."
             },
             "feature_2": {
                 "name": "MyAnimeList.com",
-                "description": "Все данные об аниме из MyAnimeList.com — лучший источник аниме в мире!"
+                "description": "All anime data from MyAnimeList.com — the best anime source in the world!"
             }
         },
-        "docsButton": "Документация",
+        "docsButton": "Documentation",
         "playgroundButton": "Playground"
     },
     "overview": {
-        "title": "Sora-QL: Удобство и гибкость для вашего аниме-приложения",
-        "description": "Sora-QL (空) — мощный инструмент для разработчиков аниме-приложений, который позволяет быстро интегрировать данные о аниме через GraphQL, с использованием информации от MyAnimeList. Удобная настройка и высокая масштабируемость делают его отличным выбором для вашего проекта.",
-        "no-commerce": "Мы не коммерческий проект. Наша цель — предоставить открытый и бесплатный доступ к данным о любимых аниме для всех пользователей, а также дать разработчикам возможность интегрировать эти данные в свои проекты без коммерческой выгоды. Мы ориентированы на сообщество и стремимся сделать мир аниме более доступным.",
+        "title": "Sora-QL: Convenience and Flexibility for Your Anime App",
+        "description": "Sora-QL (空) — a powerful tool for anime app developers, allowing quick integration of anime data through GraphQL, using information from MyAnimeList. Easy setup and high scalability make it a great choice for your project.",
+        "no-commerce": "We are a non-commercial project. Our goal is to provide open and free access to anime data for all users, as well as give developers the ability to integrate this data into their projects without commercial profit. We are community-focused and aim to make the world of anime more accessible.",
         "cta": {
-            "buttonGetAPI": "Получить API-ключ",
-            "buttonMAL": "Перейти на MyAnimeList"
+            "buttonGetAPI": "Get API Key",
+            "buttonMAL": "Go to MyAnimeList"
         }
     },
     "how_it_works": {
-        "title": "Как это работает",
-        "description": "Узнайте, как Sora-QL получает, обрабатывает и кэширует данные об аниме, используя Redis, MySQL, MongoDB и MyAnimeList API.",
+        "title": "How It Works",
+        "description": "Learn how Sora-QL fetches, processes, and caches anime data using Redis, MySQL, MongoDB, and the MyAnimeList API.",
         "details": {
-            "step_1": "Пользователь отправляет запрос к Sora-graphql для получения данных об аниме.",
-            "step_2": "GraphQL API сначала проверяет, есть ли запрашиваемые данные в  кеше. Если данные найдены, они сразу возвращаются пользователю.",
-            "step_3": "Если данных нет в кеше, Sora-graphql отправляет запрос на Sora-parser. Если данные найдены в кеше или в базах Sora-parser, они передаются Sora-graphql а он отправляет ползователю.",
-            "step_4": "Если данных нет ни в кеше, ни в MySQL / MongoDb, GraphQL API отправляет запрос к MyAnimeList API.",
-            "step_5": "Полученные данные проходят машинный перевод, форматирование и структурирование. cо стороны Sora-parser",
-            "step_6": "После обработки данные записываются в MySQL / Mongodb (если данные статичные например. список жанров или студии) и в Redis (для ускоренного доступа).",
-            "step_7": "После всех проверок и обработки Sora-parser отправляет данные в  GraphQL API а он сохраняет у себя в кеше и отправляет пользователю."
+            "step_1": "The user sends a request to Sora-graphql to fetch anime data.",
+            "step_2": "The GraphQL API first checks if the requested data is in the cache. If data is found, it is immediately returned to the user.",
+            "step_3": "If data is not in the cache, Sora-graphql sends a request to Sora-parser. If data is found in the cache or in Sora-parser databases, it is passed to Sora-graphql and then sent to the user.",
+            "step_4": "If data is not found in the cache or in MySQL/MongoDB, the GraphQL API sends a request to the MyAnimeList API.",
+            "step_5": "The fetched data undergoes machine translation, formatting, and structuring by Sora-parser.",
+            "step_6": "After processing, the data is saved in MySQL/MongoDB (for static data, such as genre lists or studios) and in Redis (for fast access).",
+            "step_7": "After all checks and processing, Sora-parser sends the data to the GraphQL API, which saves it in its cache and sends it to the user."
         },
         "graphql": {
-            "user_request": "Пользователь отправляет запрос",
-            "cache_check": "Проверка кеша",
-            "cache_miss": "Данных нет в кеше",
-            "parser_request": "Запрос к Sora-парсеру",
-            "database_check": "Проверка в базе данных",
-            "api_request": "Запрос к MyAnimeList API",
-            "cache_found": "Данные найдены в кеше",
-            "database_found": "Данные найдены в базе",
-            "data_processing": "Обработка и перевод данных",
-            "database_miss": "Данных нет в базе",
-            "save_data": "Сохранение данных в базу данных и кеш",
-            "send_data": "Отправка данных пользователю"
+            "user_request": "User sends request",
+            "cache_check": "Cache check",
+            "cache_miss": "Data not found in cache",
+            "parser_request": "Request to Sora-parser",
+            "database_check": "Database check",
+            "api_request": "Request to MyAnimeList API",
+            "cache_found": "Data found in cache",
+            "database_found": "Data found in database",
+            "data_processing": "Data processing and translation",
+            "database_miss": "Data not found in database",
+            "save_data": "Saving data to database and cache",
+            "send_data": "Sending data to user"
         }
     },
     "features": {
-        "title": "Преимущества использования SORA.QL API",
-        "description": "Использование API SORA.QL предоставляет множество преимуществ например...",
+        "title": "Advantages of Using SORA.QL API",
+        "description": "Using the SORA.QL API provides many benefits, such as...",
         "feature_1": {
-            "name": "Гибкость GraphQL ⚡",
-            "description": "Получай только нужные данные, минимизируя нагрузку и оптимизируя работу API. 🔄 Гибкость запросов позволяет легко адаптировать данные под любой проект. 🚀 Благодаря выборочной передаче данных ответы приходят быстрее, без лишней информации."
+            "name": "GraphQL Flexibility ⚡",
+            "description": "Get only the necessary data, minimizing load and optimizing API performance. 🔄 Query flexibility allows easy adaptation of data to any project. 🚀 Selective data transmission makes responses faster without unnecessary information."
         },
         "feature_2": {
-            "name": "Данные из MyAnimeList 📚",
-            "description": "Все данные об аниме из MyAnimeList.com — непревзойденного и величайшего аниме-ресурса в мире! 🌍🔥 Это не просто соц сеть, а настоящая сокровищница для аниме-фанатов, объединяющая миллионы пользователей по всему миру. 💎 Здесь собраны самые точные рейтинги, детализированные описания, обширные списки персонажей и эпизодов, актуальные рецензии и живая комьюнити, которое делает мир аниме еще ярче! 🌟"
+            "name": "Data from MyAnimeList 📚",
+            "description": "All anime data from MyAnimeList.com — the unparalleled and greatest anime resource in the world! 🌍🔥 It's not just a social network, but a true treasure trove for anime fans, bringing millions of users together worldwide. 💎 It has the most accurate ratings, detailed descriptions, extensive lists of characters and episodes, up-to-date reviews, and a lively community that makes the world of anime even brighter! 🌟"
         },
         "feature_3": {
-            "name": "Локализация на нескольких языках \uD83C\uDF0D",
-            "description": "Мы используем машинный перевод, чтобы автоматически адаптировать контент на целевой язык, делая аниме доступным для зрителей по всему миру. 🌎 Теперь любимые тайтлы, персонажи и эпизоды понятны на разных языках без лишних сложностей. 🗣️ Это упрощает интеграцию API в международные проекты и помогает фанатам наслаждаться аниме на родном языке. 📖"
+            "name": "Multi-Language Localization \uD83C\uDF0D",
+            "description": "We use machine translation to automatically adapt content to the target language, making anime accessible to viewers worldwide. 🌎 Now favorite titles, characters, and episodes are understandable in different languages without hassle. 🗣️ This simplifies the integration of the API into international projects and helps fans enjoy anime in their native language. 📖"
         },
         "feature_4": {
-            "name": "Бесплатный доступ 💸",
-            "description": "API доступно бесплатно, достаточно подать заявку. 📝 Убедитесь сами в его возможностях и начните интеграцию без финансовых вложений!. также можите использовать тестовый апи ключ. что чуть ниже"
+            "name": "Free Access 💸",
+            "description": "The API is available for free, just submit a request. 📝 See for yourself its capabilities and start integration without financial investment! You can also use a test API key, which is available below."
         },
         "feature_5": {
-            "name": "Актуальные данные 🔄",
-            "description": "Данные синхронизированы напрямую с API MyAnimeList и кэшируются для быстрого доступа. 📡 Ты всегда получаешь актуальную информацию о новых релизах, рейтингах и изменениях в аниме-индустрии, не переживая о задержках!"
+            "name": "Up-to-date Data 🔄",
+            "description": "Data is synchronized directly with the MyAnimeList API and cached for quick access. 📡 You always get up-to-date information about new releases, ratings, and changes in the anime industry without worrying about delays!"
         },
         "feature_6": {
-            "name": "Создание аниме-приложений для всего мира 🌍",
-            "description": "Используя наш API, ты можешь создать аниме-приложение, доступное для зрителей по всему миру! 📱 Мы  c MyAnimeList.com предоставляем полный доступ к данным о тайтлах, персонажах и эпизодах, чтобы ты мог легко строить мульти-язычные приложения и сервисы, которые будут популярны среди глобальной аудитории. 🌐"
+            "name": "Creating Anime Apps for the World 🌍",
+            "description": "By using our API, you can create anime apps available to viewers worldwide! 📱 With MyAnimeList.com, we provide full access to data about titles, characters, and episodes, so you can easily build multilingual apps and services that will be popular with global audiences. 🌐"
         }
     },
     "og_features": {
         "feature_1": {
-            "name": "Гибкость GraphQL ⚡",
-            "description": "Получай только нужные данные, минимизируя нагрузку и ускоряя ответы."
+            "name": "GraphQL Flexibility ⚡",
+            "description": "Get only the necessary data, minimizing load and speeding up responses."
         },
         "feature_2": {
-            "name": "Данные из MyAnimeList 📚",
-            "description": "Доступ к точным данным и рейтингам с MyAnimeList, крупнейшего аниме-ресурса."
+            "name": "Data from MyAnimeList 📚",
+            "description": "Access accurate data and ratings from MyAnimeList, the largest anime resource."
         },
         "feature_3": {
-            "name": "Локализация на нескольких языках 🌍",
-            "description": "Машинный перевод для доступности аниме на разных языках по всему миру."
+            "name": "Multi-Language Localization 🌍",
+            "description": "Machine translation for making anime available in different languages worldwide."
         },
         "feature_4": {
-            "name": "Бесплатный доступ 💸",
-            "description": "API доступно бесплатно с возможностью тестирования через ключ."
+            "name": "Free Access 💸",
+            "description": "API available for free with testing through a key."
         },
         "feature_5": {
-            "name": "Актуальные данные 🔄",
-            "description": "Данные синхронизируются с MyAnimeList для получения актуальной информации."
+            "name": "Up-to-date Data 🔄",
+            "description": "Data is synchronized with MyAnimeList for up-to-date information."
         },
         "feature_6": {
-            "name": "Создание аниме-приложений для всего мира 🌍",
-            "description": "Используй наш API для создания мультиязычных аниме-приложений для глобальной аудитории."
+            "name": "Creating Anime Apps for the World 🌍",
+            "description": "Use our API to create multilingual anime apps for a global audience."
         }
     },
     "about_us": {
-        "title": "О нас",
-        "subtitle": "Anidzen Ecosystems — команда, создающая инновационные решения для аниме-сообщества.",
-        "mission": "Мы верим, что аниме должно быть доступно каждому на его родном языке. Наша миссия — сделать аниме удобным и доступным для всех, независимо от страны и языка. Мы создаём инструменты, которые помогают разработчикам и энтузиастам интегрировать аниме в свои проекты, позволяя легко создавать собственные аниме-приложения.",
-        "values": "Мы стремимся к качеству, честности и удобству. Мы верим, что свободный доступ к аниме объединит людей по всему миру. Sora.QL — некоммерческий GraphQL API, предоставляющий возможность интеграции аниме-контента без ограничений."
+        "title": "About Us",
+        "subtitle": "Anidzen Ecosystems — A team creating innovative solutions for the anime community.",
+        "mission": "We believe that anime should be accessible to everyone in their native language. Our mission is to make anime convenient and accessible for all, regardless of country or language. We create tools that help developers and enthusiasts integrate anime into their projects, allowing them to easily build their own anime apps.",
+        "values": "We strive for quality, honesty, and convenience. We believe that free access to anime will unite people worldwide. Sora.QL is a non-commercial GraphQL API providing anime content integration without restrictions."
     },
     "showcase": {
-        "title": "Проекты, использующие SORA.QL API",
-        "description": "Эти удивительные проекты используют мощь Sora.ql API, чтобы предоставить вам лучший опыт с аниме.",
-        "view_on_github": "Посмотреть на GitHub",
+        "title": "Projects Using SORA.QL API",
+        "description": "These amazing projects leverage the power of the Sora.QL API to provide you with the best anime experience.",
+        "view_on_github": "View on GitHub",
         "projects": {
             "ota_ku_am": {
-                "name": "ota-ku.am - Твой Личный Портал в Мир Аниме",
-                "description": "Лучшие аниме онлайн бесплатно с русской озвучкой!"
+                "name": "ota-ku.am - Your Personal Portal to the World of Anime",
+                "description": "The best anime online for free with Russian voice acting!"
             }
         }
     },

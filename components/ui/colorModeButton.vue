@@ -43,15 +43,11 @@ const switchTheme = () => {
             label="system"
         ></UButton>
 
-        <UButton
-            @click="switchTheme"
-
-            variant="soft"
-            label="system"
-        ></UButton>
-
-        <UIcon name="i-heroicons-computer-desktop"/>
-        <UIcon name="i-heroicons-moon"/>
-        <UIcon name="i-heroicons-sun"/>
+        <!-- это ставил тут потомучто у нукста есть баг иконок и данная версия nuxt ui больше  не подержовается -->
+        <div class="hidden">
+            <UIcon name="i-heroicons-computer-desktop"/>
+            <UIcon name="i-heroicons-moon"/>
+            <UIcon name="i-heroicons-sun"/>
+        </div>
     </div>
 </template>

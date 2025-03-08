@@ -20,34 +20,36 @@ const switchTheme = () => {
 </script>
 
 <template>
-    <div>
-        <UButton
-            v-if="themePreference === 'light'"
-            @click="switchTheme"
-            icon="i-heroicons-sun"
-            variant="soft"
-            label="light"
-        ></UButton>
-        <UButton
-            v-if="themePreference === 'dark'"
-            @click="switchTheme"
-            icon="i-heroicons-moon"
-            variant="soft"
-            label="dark"
-        ></UButton>
-        <UButton
-            v-if="themePreference === 'system'"
-            @click="switchTheme"
-            icon="i-heroicons-computer-desktop"
-            variant="soft"
-            label="system"
-        ></UButton>
+    <ClientOnly>
+        <div>
+            <UButton
+                v-if="themePreference === 'light'"
+                @click="switchTheme"
+                icon="i-heroicons-sun"
+                variant="soft"
+                label="light"
+            ></UButton>
+            <UButton
+                v-if="themePreference === 'dark'"
+                @click="switchTheme"
+                icon="i-heroicons-moon"
+                variant="soft"
+                label="dark"
+            ></UButton>
+            <UButton
+                v-if="themePreference === 'system'"
+                @click="switchTheme"
+                icon="i-heroicons-computer-desktop"
+                variant="soft"
+                label="system"
+            ></UButton>
 
-        <UButton
-            @click="switchTheme"
-            icon="i-heroicons-computer-desktop"
-            variant="soft"
-            label="system"
-        ></UButton>
-    </div>
+            <UButton
+                @click="switchTheme"
+                icon="i-heroicons-computer-desktop"
+                variant="soft"
+                label="system"
+            ></UButton>
+        </div>
+    </ClientOnly>
 </template>

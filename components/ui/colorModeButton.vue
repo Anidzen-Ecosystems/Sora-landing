@@ -26,21 +26,18 @@ const switchTheme = () => {
             @click="switchTheme"
             icon="i-heroicons-sun"
             variant="soft"
-            label="light"
         ></UButton>
         <UButton
             v-if="themePreference === 'dark'"
             @click="switchTheme"
             icon="i-heroicons-moon"
             variant="soft"
-            label="dark"
         ></UButton>
         <UButton
             v-if="themePreference === 'system'"
             @click="switchTheme"
             icon="i-heroicons-computer-desktop"
             variant="soft"
-            label="system"
         ></UButton>
 
         <!-- это ставил тут потомучто у нукста есть баг иконок и данная версия nuxt ui больше  не подержовается -->
@@ -48,6 +45,8 @@ const switchTheme = () => {
             <UIcon name="i-heroicons-computer-desktop"/>
             <UIcon name="i-heroicons-moon"/>
             <UIcon name="i-heroicons-sun"/>
+            <UIcon name="i-heroicons-sun"/>
+             <UIcon name="i-heroicons-x-mark-20-solid"/>
         </div>
     </div>
 </template>

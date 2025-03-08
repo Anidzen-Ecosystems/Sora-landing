@@ -24,17 +24,18 @@ const switchTheme = () => {
         <UButton
             v-if="themePreference === 'light'"
             @click="switchTheme"
-            icon="bi:sun-fill"
+            icon="i-heroicons-sun"
         ></UButton>
         <UButton
             v-if="themePreference === 'dark'"
             @click="switchTheme"
-            icon="bi:moon-fill"
+            icon="i-heroicons-moon"
         ></UButton>
         <UButton
             v-if="themePreference === 'system'"
             @click="switchTheme"
-            icon="bi:laptop-fill"
+            icon="i-heroicons-computer-desktop"
         ></UButton>
     </div>
+
 </template>

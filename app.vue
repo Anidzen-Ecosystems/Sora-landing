@@ -6,13 +6,13 @@ const color = computed(() =>
     colorMode.value === 'dark' ? '#18181b' : 'white',
 );
 
-const commonKeywords = '';
+const commonKeywords = 'sora.ql API graphql myanimelist';
 
 const keywords = {
     en: '',
     hy: '',
-    ru: '',
     ja: '',
+    ru: '',
 };
 
 const currentKeywords = computed(() => keywords[locale.value] || keywords.en);
@@ -28,6 +28,12 @@ useHead({
         },
         { name: 'robots', content: 'index, follow' },
         { name: 'description', content: t('meta.index.description')},
+        { name: 'canonical', content: 'https://sora-beta.anidzen.com/' + locale.value },
+        { property: 'image', content: 'https://sora-beta.anidzen.com' + '/images/og-images/og-image-' + locale.value + '.png'},
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:title', content: t('meta.index.title') },
+        { property: 'twitter:description', content: t('meta.index.description') },
+        { property: 'twitter:image', content: 'https://sora-beta.anidzen.com/images/og-images/og-image-' + locale.value + '.png' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: t('meta.index.title') },
         { property: 'og:description', content: t('meta.index.description') },

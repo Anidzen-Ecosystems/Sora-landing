@@ -119,9 +119,9 @@ onBeforeUnmount(() => {
                 </template>
 
                 <template #right>
-                    <UButton icon="i-heroicons-pencil-square" label="sex"/>
-                    <UColorModeButton />
+<!--                    <UColorModeButton />-->
                     <UiLanguageSelect/>
+                    <UiColorModeButton/>
                 </template>
             </UHeader>
         </UContainer>

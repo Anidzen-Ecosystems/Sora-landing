@@ -27,7 +27,6 @@ useHead({
             content: commonKeywords + ' ' + currentKeywords.value,
         },
         { name: 'robots', content: 'index, follow' },
-        { name: 'description', content: t('meta.index.description') },
         {
             name: 'canonical',
             content: 'https://sora-beta.anidzen.com/' + locale.value,

@@ -42,11 +42,11 @@ const switchTheme = () => {
 
         <!-- это ставил тут потомучто у нукста есть баг иконок и данная версия nuxt ui больше  не подержовается -->
         <div class="hidden">
-            <UIcon name="i-heroicons-computer-desktop"/>
-            <UIcon name="i-heroicons-moon"/>
-            <UIcon name="i-heroicons-sun"/>
-            <UIcon name="i-heroicons-sun"/>
-             <UIcon name="i-heroicons-x-mark-20-solid"/>
+            <UIcon name="i-heroicons-computer-desktop" />
+            <UIcon name="i-heroicons-moon" />
+            <UIcon name="i-heroicons-sun" />
+            <UIcon name="i-heroicons-sun" />
+            <UIcon name="i-heroicons-x-mark-20-solid" />
         </div>
     </div>
 </template>

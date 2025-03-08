@@ -45,9 +45,13 @@ const switchTheme = () => {
 
         <UButton
             @click="switchTheme"
-            icon="i-heroicons-computer-desktop"
+
             variant="soft"
             label="system"
         ></UButton>
+
+        <UIcon name="i-heroicons-computer-desktop"/>
+        <UIcon name="i-heroicons-moon"/>
+        <UIcon name="i-heroicons-sun"/>
     </div>
 </template>

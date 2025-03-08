@@ -9,10 +9,10 @@ const color = computed(() =>
 const commonKeywords = 'sora.ql API graphql myanimelist';
 
 const keywords = {
-    en: '',
-    hy: '',
-    ja: '',
-    ru: '',
+    en: 'anime API, GraphQL API, MyAnimeList supported, anime metadata, sora.ql',
+    hy: 'անիմե API, GraphQL API, MyAnimeList աջակցությամբ, անիմե մետատվյալներ, sora.ql',
+    ja: 'アニメAPI, GraphQL API, MyAnimeList サポート, アニメメタデータ, sora.ql',
+    ru: 'аниме API, GraphQL API, при поддержке MyAnimeList, аниме метаданные, sora.ql',
 };
 
 const currentKeywords = computed(() => keywords[locale.value] || keywords.en);

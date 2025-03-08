@@ -28,12 +28,12 @@ useHead({
         { name: 'robots', content: 'index, follow' },
         {
             name: 'canonical',
-            content: 'https://sora-beta.anidzen.com/' + locale.value,
+            content: 'https://sora-ql.anidzen.com/' + locale.value,
         },
         {
             property: 'image',
             content:
-                'https://sora-beta.anidzen.com' +
+                'https://sora-ql.anidzen.com' +
                 '/images/og-images/og-image-' +
                 locale.value +
                 '.png',
@@ -47,7 +47,7 @@ useHead({
         {
             property: 'twitter:image',
             content:
-                'https://sora-beta.anidzen.com/images/og-images/og-image-' +
+                'https://sora-ql.anidzen.com/images/og-images/og-image-' +
                 locale.value +
                 '.png',
         },
@@ -57,12 +57,12 @@ useHead({
         { property: 'og:locale', content: locale.value },
         {
             property: 'og:url',
-            content: 'https://sora-beta.anidzen.com' + '/' + (locale.value === 'en' ? '' : '/' + locale.value),
+            content: 'https://sora-ql.anidzen.com' + '/' + (locale.value === 'en' ? '' : '/' + locale.value),
         },
         {
             property: 'og:image',
             content:
-                'https://sora-beta.anidzen.com' +
+                'https://sora-ql.anidzen.com' +
                 '/images/og-images/og-image-' +
                 locale.value +
                 '.png',

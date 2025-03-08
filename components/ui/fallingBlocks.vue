@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="absolute hidden lg:block">
+    <div class="absolute -z-10 hidden lg:block">
         <div class="tetris">
             <div
                 v-for="(row, rowIndex) in grid"

@@ -33,7 +33,7 @@ const features = [
 </script>
 
 <template>
-    <section class="lg:h-dvh pt-10 md:pt-0 w-dvw flex flex-col items-center justify-center">
+    <section class="z-20 lg:h-dvh pt-10 md:pt-0 w-dvw flex flex-col items-center justify-center">
         <ULandingSection
             :title="t('primary_title.title')"
             :description="t('primary_title.description')"

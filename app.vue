@@ -18,7 +18,6 @@ const keywords = {
 const currentKeywords = computed(() => keywords[locale.value] || keywords.en);
 
 useHead({
-    title: t('meta.index.title'),
     meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { key: 'theme-color', name: 'theme-color', content: color },
@@ -58,7 +57,7 @@ useHead({
         { property: 'og:locale', content: locale.value },
         {
             property: 'og:url',
-            content: 'https://sora-beta.anidzen.com' + '/' + locale.value,
+            content: 'https://sora-beta.anidzen.com' + '/' + (locale.value === 'en' ? '' : '/' + locale.value),
         },
         {
             property: 'og:image',

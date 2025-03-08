@@ -42,5 +42,12 @@ const switchTheme = () => {
             variant="soft"
             label="system"
         ></UButton>
+
+        <UButton
+            @click="switchTheme"
+            icon="i-heroicons-computer-desktop"
+            variant="soft"
+            label="system"
+        ></UButton>
     </div>
 </template>

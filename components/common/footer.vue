@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const localeRoute = useLocaleRoute();
 const { t } = useI18n();
+const config = useRuntimeConfig();
 
 const currentYear = computed(() => new Date().getFullYear());
 
@@ -97,8 +98,10 @@ const sections = computed(() => [
                     <span class="text-primary">© 2024-{{ currentYear }}</span>
                     {{ t('footer.copyright') }}
                 </span>
-                <div class="hidden sm:flex sm:justify-center gap-3">
+                <div class="hidden sm:flex sm:justify-center gap-3 items-center">
                     {{ t('footer.made_with_love') }} 💖
+
+                    <span class="italic text-xs">{{ config.public.appVersion }}</span>
                 </div>
             </div>
         </UContainer>

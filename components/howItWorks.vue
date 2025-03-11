@@ -29,6 +29,8 @@ const features = [
 onMounted(() => {
     mermaid.init(undefined, '.mermaid');
 });
+
+const isClient = typeof window !== 'undefined';
 </script>
 
 <template>
@@ -41,28 +43,30 @@ onMounted(() => {
                 align="right"
                 :ui="{ wrapper: 'py-10 sm:py-10' }"
             >
-                <div class="mermaid">
-                    graph TD; A[👤
-                    {{ t('how_it_works.graphql.user_request') }}] -->|📩
-                    {{ t('how_it_works.graphql.cache_check') }}| B[🌐 GraphQL
-                    API]; B -->|🛑 {{ t('how_it_works.graphql.cache_check') }}|
-                    D[⚡ Redis]; D -->|✅
-                    {{ t('how_it_works.graphql.cache_found') }}| B; D -->|❌
-                    {{ t('how_it_works.graphql.cache_miss') }}| E[🔍
-                    Sora-Parser]; E -->|🛑
-                    {{ t('how_it_works.graphql.cache_check') }}| D; D -->|✅
-                    {{ t('how_it_works.graphql.cache_found') }}| E; E -->|💾
-                    {{ t('how_it_works.graphql.database_check') }}| H[🗄️ MySQL /
-                    MongoDB]; H -->|✅
-                    {{ t('how_it_works.graphql.database_found') }}| E; H -->|❌
-                    {{ t('how_it_works.graphql.database_miss') }}| F[🌍
-                    MyAnimeList API]; F -->|📨
-                    {{ t('how_it_works.graphql.api_request') }}| G[🛠️
-                    {{ t('how_it_works.graphql.data_processing') }}]; G -->|💾
-                    {{ t('how_it_works.graphql.save_data') }}| H & D; G -->|🚀
-                    {{ t('how_it_works.graphql.send_data') }}| E; E -->|📤
-                    {{ t('how_it_works.graphql.send_data') }}| B; B -->|📤
-                    {{ t('how_it_works.graphql.user_request') }}| A;
+                <div>
+                    <div class="mermaid">
+                        graph TD; A[👤
+                        {{ t('how_it_works.graphql.user_request') }}] -->|📩
+                        {{ t('how_it_works.graphql.cache_check') }}| B[🌐 GraphQL
+                        API]; B -->|🛑 {{ t('how_it_works.graphql.cache_check') }}|
+                        D[⚡ Redis]; D -->|✅
+                        {{ t('how_it_works.graphql.cache_found') }}| B; D -->|❌
+                        {{ t('how_it_works.graphql.cache_miss') }}| E[🔍
+                        Sora-Parser]; E -->|🛑
+                        {{ t('how_it_works.graphql.cache_check') }}| D; D -->|✅
+                        {{ t('how_it_works.graphql.cache_found') }}| E; E -->|💾
+                        {{ t('how_it_works.graphql.database_check') }}| H[🗄️ MySQL /
+                        MongoDB]; H -->|✅
+                        {{ t('how_it_works.graphql.database_found') }}| E; H -->|❌
+                        {{ t('how_it_works.graphql.database_miss') }}| F[🌍
+                        MyAnimeList API]; F -->|📨
+                        {{ t('how_it_works.graphql.api_request') }}| G[🛠️
+                        {{ t('how_it_works.graphql.data_processing') }}]; G -->|💾
+                        {{ t('how_it_works.graphql.save_data') }}| H & D; G -->|🚀
+                        {{ t('how_it_works.graphql.send_data') }}| E; E -->|📤
+                        {{ t('how_it_works.graphql.send_data') }}| B; B -->|📤
+                        {{ t('how_it_works.graphql.user_request') }}| A;
+                    </div>
                 </div>
             </ULandingSection>
         </UContainer>

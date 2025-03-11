@@ -4,6 +4,12 @@ export default defineNuxtConfig({
         baseURL: process.env.NUXT_APP_BASE_URL || '/',
     },
 
+    runtimeConfig: {
+        public: {
+            appVersion: process.env.APP_VERSION || '1.0.0',
+        }
+    },
+
     devtools: { enabled: true },
 
     extends: ['@nuxt/ui-pro'],

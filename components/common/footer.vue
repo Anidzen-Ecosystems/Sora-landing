@@ -98,10 +98,14 @@ const sections = computed(() => [
                     <span class="text-primary">© 2024-{{ currentYear }}</span>
                     {{ t('footer.copyright') }}
                 </span>
-                <div class="hidden sm:flex sm:justify-center gap-3 items-center">
+                <div
+                    class="hidden sm:flex sm:justify-center gap-3 items-center"
+                >
                     {{ t('footer.made_with_love') }} 💖
 
-                    <span class="italic text-xs">{{ config.public.appVersion }}</span>
+                    <span class="italic text-xs">{{
+                        config.public.appVersion
+                    }}</span>
                 </div>
             </div>
         </UContainer>

@@ -57,7 +57,10 @@ useHead({
         { property: 'og:locale', content: locale.value },
         {
             property: 'og:url',
-            content: 'https://sora-ql.anidzen.com' + '/' + (locale.value === 'en' ? '' : '/' + locale.value),
+            content:
+                'https://sora-ql.anidzen.com' +
+                '/' +
+                (locale.value === 'en' ? '' : '/' + locale.value),
         },
         {
             property: 'og:image',

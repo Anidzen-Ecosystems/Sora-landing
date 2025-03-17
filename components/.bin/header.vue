@@ -1,92 +1,112 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp()
-const { t, locale } = useI18n()
-const config = useRuntimeConfig()
-const { activeHeadings, updateHeadings } = useScrollspy()
+const localeRoute = useLocaleRoute();
+const { t, locale } = useI18n();
+const config = useRuntimeConfig();
 
-const links = computed(() => {
-    const activeSection =
-        scrollPosition.value <= 10
-            ? 'main'
-            : activeHeadings.value.find(id =>
-            ['main', 'how-it-works', 'features', 'showcase', 'frequently-asked-questions'].includes(id)
-        ) || 'main';
-
-    return [
-        {
-            label: t('menu.main'),
-            to: '#main',
-            i18n: 'main',
-            active: activeSection === 'main',
-            id: 'main',
-        },
-        {
-            label: t('menu.how_it_works'),
-            to: '#how-it-works',
-            i18n: 'how_it_works',
-            active: activeSection === 'how-it-works',
-            id: 'how-it-works',
-        },
-        {
-            label: t('menu.features'),
-            to: '#features',
-            i18n: 'features',
-            active: activeSection === 'features',
-            id: 'features',
-        },
-        {
-            label: t('menu.showcase'),
-            to: '#showcase',
-            i18n: 'showcase',
-            active: activeSection === 'showcase',
-            id: 'showcase',
-        },
-        {
-            label: t('menu.faq'),
-            to: '#frequently-asked-questions',
-            i18n: 'faq',
-            active: activeSection === 'frequently-asked-questions',
-            id: 'frequently-asked-questions',
-        },
-    ];
-});
-
-nuxtApp.hooks.hookOnce('page:finish', () => {
-    updateHeadings([
-        document.querySelector('#main'),
-        document.querySelector('#how-it-works'),
-        document.querySelector('#features'),
-        document.querySelector('#showcase'),
-        document.querySelector('#frequently-asked-questions')
-    ].filter(Boolean) as Element[])
-})
-
-watch(
-    () => locale.value,
-    () => {
-        nextTick(() => {
-            updateHeadings([
-                document.querySelector('#main'),
-                document.querySelector('#how-it-works'),
-                document.querySelector('#features'),
-                document.querySelector('#showcase'),
-                document.querySelector('#frequently-asked-questions')
-            ].filter(Boolean) as Element[]);
-        });
-    }
-)
+const links = ref([
+    {
+        label: t('menu.main'),
+        to: '#main',
+        i18n: 'main',
+        active: false,
+        id: 'main',
+    },
+    {
+        label: t('menu.how_it_works'),
+        to: '#how-it-works',
+        i18n: 'how_it_works',
+        active: false,
+        id: 'how-it-works',
+    },
+    {
+        label: t('menu.features'),
+        to: '#features',
+        i18n: 'features',
+        active: false,
+        id: 'features',
+    },
+    {
+        label: t('menu.showcase'),
+        to: '#showcase',
+        i18n: 'showcase',
+        active: false,
+        id: 'showcase',
+    },
+    {
+        label: t('menu.faq'),
+        to: '#frequently-asked-questions',
+        i18n: 'faq',
+        active: false,
+        id: 'frequently-asked-questions',
+    },
+]);
 
 const scrollPosition = ref(0);
 
 const handleScroll = () => {
     scrollPosition.value = window.scrollY;
+    updateActiveLinks();
+};
+
+const updateActiveLinks = () => {
+    links.value.forEach((link) => {
+        link.active = false;
+    });
+
+    links.value.forEach((link) => {
+        const section = document.querySelector(link.to) as HTMLElement;
+        if (section && isInViewport(section)) {
+            link.active = true;
+        }
+    });
+};
+
+const isInViewport = (el: HTMLElement) => {
+    const rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.top <= window.innerHeight;
+};
+
+watch(
+    () => locale.value,
+    () => {
+        links.value.forEach((link) => {
+            link.label = t(`menu.${link.i18n}`);
+        });
+
+        updateActiveLinks();
+    },
+);
+
+const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            links.value = links.value.map((link) => {
+                if (link.id === entry.target.id) {
+                    return { ...link, active: true };
+                }
+                return { ...link, active: false };
+            });
+        }
+    });
 };
 
 onMounted(() => {
     window.addEventListener('scroll', handleScroll);
+
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 1,
+    });
+
+    const sections = document.querySelectorAll('.section');
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    updateActiveLinks();
 });
 
 onBeforeUnmount(() => {
+    observer.disconnect();
     window.removeEventListener('scroll', handleScroll);
 });
 </script>
@@ -134,6 +154,7 @@ onBeforeUnmount(() => {
                 </template>
 
                 <template #right>
+                    <!--                    <UColorModeButton />-->
                     <UiLanguageSelect />
                     <UiColorModeButton />
                 </template>

@@ -2,7 +2,7 @@
 const localeRoute = useLocaleRoute();
 const { t, locale } = useI18n();
 const config = useRuntimeConfig();
-
+ц
 const links = ref([
     {
         label: t('menu.main'),

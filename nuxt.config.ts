@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             appVersion: process.env.APP_VERSION || '1.0.0',
+            appSupportEmail: process.env.APP_SUPPORT_EMAIL || 'noreply.anidzen@gmail.com',
         },
     },
 

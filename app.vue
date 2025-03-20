@@ -88,6 +88,8 @@ useHead({
         </NuxtLayout>
     </UMain>
 
+    <CommonTestShowModal/>
+
     <UModals />
     <UNotifications />
 </template>

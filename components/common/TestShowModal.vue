@@ -10,7 +10,7 @@ onMounted(() => {
     if (!localStorage.getItem(storageKey)) {
         setTimeout(() => {
             isOpen.value = true;
-        }, 500);
+        }, 100);
     }
 });
 

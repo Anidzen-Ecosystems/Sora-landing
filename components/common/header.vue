@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
                                     'scrolled-logo': scrollPosition > 150,
                                 }"
                             />
-                            <div class="flex justify-center flex-col">
+                            <div class="hidden sm:flex justify-center flex-col">
                                 <h1 class="text-2xl font-bold uppercase">
                                     {{ t('site_name') }}.<span
                                         class="text-primary"

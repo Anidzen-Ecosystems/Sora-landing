@@ -2,7 +2,7 @@
 const { t } = useI18n();
 
 const items = [
-    { label: t('cta.button_text'), size: 'xl', variant: 'soft' },
+    { label: t('cta.button_text'), size: 'xl', variant: 'soft', disabled: true },
     {
         label: t('cta.my_anime_list'),
         variant: 'link',

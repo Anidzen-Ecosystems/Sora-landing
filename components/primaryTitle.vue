@@ -5,8 +5,8 @@ import { GET_ANIME_QUERY } from '~/graphql/getAnimeAll';
 const graphqlCode = GET_ANIME_QUERY;
 
 const links = [
-    { label: t('cta.button_text'), size: 'xl', variant: 'soft' },
-    { label: t('primary_title.playgroundButton'), size: 'xl', variant: 'soft' },
+    { label: t('cta.button_text'), size: 'xl', variant: 'soft', disabled: true },
+    { label: t('primary_title.playgroundButton'), size: 'xl', variant: 'soft', disabled: true },
     {
         label: t('cta.my_anime_list'),
         variant: 'link',

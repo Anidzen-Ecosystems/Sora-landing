@@ -12,6 +12,16 @@
             "description": "多言語サポートと高いパフォーマンスを備えた、無料かつ強力なアニメGraphQL API。"
         }
     },
+    "beta": {
+        "modal": {
+            "title": "アルファ版",
+            "description": "当社のAPIは現在開発中であり、安定して動作しない可能性があります。ご不便をおかけして申し訳ありません。",
+            "contact_prompt": "ご質問がありますか？ お問い合わせください：",
+            "thank_you": "ご理解いただきありがとうございます！",
+            "success": "OK、了解しました！",
+            "dont_show_again": "再表示しない"
+        }
+    },
     "menu": {
         "main": "メイン",
         "overview": "概要",

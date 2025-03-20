@@ -4,7 +4,7 @@ const config = useRuntimeConfig();
 
 const isOpen = ref(false);
 const storageKey = 'hdie_beta_modal';
-const email = config.public.supportEmail;
+const email = config.public.appSupportEmail;
 
 onMounted(() => {
     if (!localStorage.getItem(storageKey)) {

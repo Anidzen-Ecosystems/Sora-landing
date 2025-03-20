@@ -12,6 +12,16 @@
             "description": "Free and powerful GraphQL API for anime with multi-language support and high performance."
         }
     },
+    "beta": {
+        "modal": {
+            "title": "Alpha Version",
+            "description": "Our API is currently in active development and may not work stably. We apologize for any inconvenience.",
+            "contact_prompt": "Have questions? Contact us:",
+            "thank_you": "Thank you for your understanding!",
+            "success": "OK, got it!",
+            "dont_show_again": "Don't show again"
+        }
+    },
     "menu": {
         "main": "Main",
         "overview": "Overview",
